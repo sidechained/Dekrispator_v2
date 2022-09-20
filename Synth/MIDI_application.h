@@ -20,11 +20,7 @@
 
 #include "CONSTANTS.h"
 #include "random.h"
-#include "drifter.h"
-#include "sinetable.h"
 #include "notesTables.h"
-#include "drifter.h"
-#include "soundGen.h"
 #include "audio_conf.h"
 
 /*------------------------------------------------------------------------------*/

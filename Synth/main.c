@@ -38,23 +38,14 @@ USBH_HandleTypeDef hUSBHost; /* USB Host handle */
 
 MIDI_ApplicationTypeDef Appli_state = APPLICATION_IDLE;
 
-bool demoMode = true;
-bool freeze = false;
-bool sequencerIsOn = true;
-extern ADSR_t adsr;
-
 /*---------------------------------------------------------------------------*/
 static void SystemClock_Config(void);
 static void USBH_UserProcess_callback(USBH_HandleTypeDef *pHost, uint8_t vId);
 /*----------------------------------------------------------------------------*/
 
 void ButtonPressed_action(void)
-{ // User butter toggles sequencer
-	sequencerIsOn = !sequencerIsOn;
-	if (!sequencerIsOn)
-		ADSR_keyOff(&adsr);
-	Reset_notes_On();
-	BSP_LED_Toggle(LED_Red);
+{
+	// nothing to do 
 }
 /*----------------------------------------------------------------------------*/
 void ButtonReleased_action(void)

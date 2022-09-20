@@ -1,4 +1,5 @@
 ################################################################################
+ARM_PATH=/Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/
 
 -include ../makefile.init
 
@@ -46,25 +47,25 @@ all: Dekrispator_v2.elf secondary-outputs
 Dekrispator_v2.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -T "../STM32F407VG_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"Dekrispator_v2.map" --specs=nosys.specs -o "Dekrispator_v2.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -T "../STM32F407VG_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"Dekrispator_v2.map" --specs=nosys.specs -o "Dekrispator_v2.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 Dekrispator_v2.bin: Dekrispator_v2.elf
 	@echo 'Invoking: Cross ARM GNU Create Flash Image'
-	arm-none-eabi-objcopy -O binary "Dekrispator_v2.elf"  "Dekrispator_v2.bin"
+	$(ARM_PATH)arm-none-eabi-objcopy -O binary "Dekrispator_v2.elf"  "Dekrispator_v2.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 Dekrispator_v2.lst: Dekrispator_v2.elf
 	@echo 'Invoking: Cross ARM GNU Create Listing'
-	arm-none-eabi-objdump --source --all-headers --demangle --line-numbers --wide "Dekrispator_v2.elf" > "Dekrispator_v2.lst"
+	$(ARM_PATH)arm-none-eabi-objdump --source --all-headers --demangle --line-numbers --wide "Dekrispator_v2.elf" > "Dekrispator_v2.lst"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 Dekrispator_v2.siz: Dekrispator_v2.elf
 	@echo 'Invoking: Cross ARM GNU Print Size'
-	arm-none-eabi-size --format=berkeley --totals "Dekrispator_v2.elf"
+	$(ARM_PATH)arm-none-eabi-size --format=berkeley --totals "Dekrispator_v2.elf"
 	@echo 'Finished building: $@'
 	@echo ' '
 
