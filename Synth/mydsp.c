@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------
-name: "sine"
+name: "mydsp", "FaustDSP"
 version: "2.50.2"
 Code generated with Faust 2.49.1 (https://faust.grame.fr)
 Compilation options: -lang c -es 1 -mcd 16 -single -ftz 0
@@ -38,9 +38,8 @@ extern "C" {
 #endif
 
 typedef struct {
+	int iRec0[2];
 	int fSampleRate;
-	float fConst0;
-	float fRec0[2];
 } mydsp;
 
 mydsp* newmydsp() { 
@@ -52,22 +51,16 @@ void deletemydsp(mydsp* dsp) {
 	free(dsp);
 }
 
-// void metadatamydsp(MetaGlue* m) { 
-// 	m->declare(m->metaInterface, "compile_options", "-single -scal -I libraries/ -I project/ -lang wasm");
-// 	m->declare(m->metaInterface, "filename", "sine.dsp");
-// 	m->declare(m->metaInterface, "library_path0", "/libraries/stdfaust.lib");
-// 	m->declare(m->metaInterface, "library_path1", "/libraries/maths.lib");
-// 	m->declare(m->metaInterface, "library_path2", "/libraries/platform.lib");
-// 	m->declare(m->metaInterface, "maths_lib_author", "GRAME");
-// 	m->declare(m->metaInterface, "maths_lib_copyright", "GRAME");
-// 	m->declare(m->metaInterface, "maths_lib_license", "LGPL with exception");
-// 	m->declare(m->metaInterface, "maths_lib_name", "Faust Math Library");
-// 	m->declare(m->metaInterface, "maths_lib_version", "2.5");
-// 	m->declare(m->metaInterface, "name", "sine");
-// 	m->declare(m->metaInterface, "platform_lib_name", "Generic Platform Library");
-// 	m->declare(m->metaInterface, "platform_lib_version", "0.2");
-// 	m->declare(m->metaInterface, "version", "2.50.2");
-// }
+void metadatamydsp(MetaGlue* m) { 
+	m->declare(m->metaInterface, "compile_options", "-single -scal -I libraries/ -I project/ -lang wasm");
+	m->declare(m->metaInterface, "filename", "mydsp.dsp");
+	m->declare(m->metaInterface, "library_path0", "/libraries/stdfaust.lib");
+	m->declare(m->metaInterface, "library_path1", "/libraries/noises.lib");
+	m->declare(m->metaInterface, "name", "mydsp");
+	m->declare(m->metaInterface, "noises_lib_name", "Faust Noise Generator Library");
+	m->declare(m->metaInterface, "noises_lib_version", "0.4");
+	m->declare(m->metaInterface, "version", "2.50.2");
+}
 
 int getSampleRatemydsp(mydsp* dsp) {
 	return dsp->fSampleRate;
@@ -91,14 +84,13 @@ void instanceClearmydsp(mydsp* dsp) {
 	{
 		int l0;
 		for (l0 = 0; l0 < 2; l0 = l0 + 1) {
-			dsp->fRec0[l0] = 0.0f;
+			dsp->iRec0[l0] = 0;
 		}
 	}
 }
 
 void instanceConstantsmydsp(mydsp* dsp, int sample_rate) {
 	dsp->fSampleRate = sample_rate;
-	dsp->fConst0 = 1e+03f / fminf(1.92e+05f, fmaxf(1.0f, (float)(dsp->fSampleRate)));
 }
 
 void instanceInitmydsp(mydsp* dsp, int sample_rate) {
@@ -112,10 +104,10 @@ void initmydsp(mydsp* dsp, int sample_rate) {
 	instanceInitmydsp(dsp, sample_rate);
 }
 
-// void buildUserInterfacemydsp(mydsp* dsp, UIGlue* ui_interface) {
-// 	ui_interface->openVerticalBox(ui_interface->uiInterface, "sine");
-// 	ui_interface->closeBox(ui_interface->uiInterface);
-// }
+void buildUserInterfacemydsp(mydsp* dsp, UIGlue* ui_interface) {
+	ui_interface->openVerticalBox(ui_interface->uiInterface, "mydsp");
+	ui_interface->closeBox(ui_interface->uiInterface);
+}
 
 void computemydsp(mydsp* dsp, int count, FAUSTFLOAT** RESTRICT inputs, FAUSTFLOAT** RESTRICT outputs) {
 	FAUSTFLOAT* output0 = outputs[0];
@@ -123,9 +115,9 @@ void computemydsp(mydsp* dsp, int count, FAUSTFLOAT** RESTRICT inputs, FAUSTFLOA
 	{
 		int i0;
 		for (i0 = 0; i0 < count; i0 = i0 + 1) {
-			dsp->fRec0[0] = dsp->fConst0 + (dsp->fRec0[1] - floorf(dsp->fRec0[1]));
-			output0[i0] = (FAUSTFLOAT)(0.75f * sinf(6.2831855f * dsp->fRec0[0]));
-			dsp->fRec0[1] = dsp->fRec0[0];
+			dsp->iRec0[0] = 1103515245 * dsp->iRec0[1] + 12345;
+			output0[i0] = (FAUSTFLOAT)(4.656613e-10f * (float)(dsp->iRec0[0]));
+			dsp->iRec0[1] = dsp->iRec0[0];
 		}
 	}
 }

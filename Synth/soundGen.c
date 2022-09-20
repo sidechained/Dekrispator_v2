@@ -25,7 +25,8 @@
  */
 
 #include "soundGen.h"
-#include "sine.c"
+#include "CInterface.h"
+#include "mydsp.c"
 
 // #define EPSI				.00002f
 
