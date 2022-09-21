@@ -26,6 +26,16 @@
 
 #include "soundGen.h"
 #include "CInterface.h"
+
+typedef struct struct_synth_interface {
+    float* slider1;
+    float* slider2;
+    float* slider3;
+    float* slider4;
+} synth_interface_t;
+
+synth_interface_t synth_interface;
+
 #include "mydsp.c"
 
 // #define EPSI				.00002f
@@ -39,6 +49,11 @@ mydsp* dsp;
 void Synth_Init(void) {
     dsp = newmydsp();
     initmydsp(dsp, SAMPLERATE);
+    buildEmbeddedUserInterfacemydsp(dsp);
+    *(synth_interface.slider1) = 3000; // "[0]cutoffFrequencyL",500,50,10000,0.01
+    *(synth_interface.slider2) = 500; // "[1]cutoffFrequencyR",500,50,10000,0.01
+    *(synth_interface.slider3) = 10; // "[2]q",5,1,30,0.1);
+    *(synth_interface.slider4) = 0.7; // "[3]gain",1,0,1,0.01);
 }
 
 void make_sound(uint16_t *buf, uint16_t len) // BUF_LEN_DIV4

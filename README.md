@@ -10,13 +10,106 @@ Write or copy some simple Faust code using the [Faust Online IDE](https://fausti
 
 Click 'compile', then 'download', then copy the contents of the downloaded folder into the Synth directory of this repo.
 
+Note: the code can have any name, but the filename must be added as an include statement in Synth/soundGen.c i.e
+
+'#include "mydsp.c"'
+
+Note: copied CInterface.h into Synth directory for now, which eliminates need to comment out 'meta' and 'ui' sections of mydsp.c code. More info [here](https://sourceforge.net/p/faudiostream/mailman/message/30907474/)
+
 # UI -> MIDI UI
 
 Faust code is typically developed using a simple onscreen User Interface with buttons/sliders etc. The aim is to swap out this interface for the existing MIDI control interface provided by Dekrispator.
 
 In our case we are using the Korg NanoKontrol2 and have modified the original MIDI_Application.c/.h to create a simple Control Change (CC) and Note mapping for all NanoKontrol2 controls. These call functions which can be inserted into the Faust code, replacing the original user interface code elements.
 
+
+## How are faust synth parameters actually controlled?
+
+Looking at STM32F4-Synth example...
+(REMEMBER: this is written in C++)
+..they define a synth_interface in synth.h (floats):
+
+typedef struct struct_synth_interface {
+	float* acc_abs;
+	float* acc_x;
+	float* acc_y;
+	float* acc_z;
+} synth_interface_t;
+
+extern synth_interface_t synth_interface;
+extern synth_interface_t synth_interface_bas;
+
+This structure then receives the values coming from the accelerometer in main.c thread:
+
+*(synth_interface.acc_abs) = acc_abs;
+
+But how does this connect to the code in synth.cpp? Currently the interface is declared there but nothing happens with it. My guess would be the python script is supposed to modify the standard buildUserInterface function to use 'buildUserInterfaceEmbedded', which would then setup these links. simple-synth branch doesn't help as it operates without faust.
+
+Now looking at what the python script does...
+
+it takes references to interfaceAdd (now called ui_interfaceAdd) e.g.
+
+ui_interface->addHorizontalSlider(ui_interface->uiInterface, "cutoffFrequencyL", &dsp->fHslider0, (FAUSTFLOAT)5e+02f, (FAUSTFLOAT)5e+01f, (FAUSTFLOAT)1e+04f, (FAUSTFLOAT)0.01f);
+
+
+
+
 # Further Aims:
 
 - Make into an official architecture file
-- Make drivers for MEMs microphone and accellerometer/tilt sensors
+
+- Make drivers for MEMs microphone, accellerometer/tilt sensors
+- Q: do these have to use HAL library to work well with Dekrispator?
+
+STM32F4-Discovery_FW_V1.1.0/Project/Demonstration
+Uses both the microphone and accelerometers
+Performs a series of tests
+      
+      Accelerometer_MEMS_Test();
+      Move discovery kit to detect negative and positive acceleration values on X, Y and Z axis
+      
+      USB_Test();
+      USB Hardware connection
+
+      Audio_Test();
+      Audio Hardware connection
+
+      
+      Microphone_MEMS_Test();
+      Microphone MEMS Hardware connection
+
+Main functions are in selftest.c
+Microphone uses I2S over SPI2
+Q: Which library are these demos using? StdPer or HAL? A: StdPer
+Dekrispator uses HAL
+So best to find separate examples
+Also need to be careful of peripheral conflicts (i.e. I2S for recording and playback)
+Best would be to find a simultaneous audio record/playback example using HAL
+STM32CubeF4 projects are good candidates, particularly this audio one here:
+https://github.com/nguyenvuhung/STM32Cube_FW_F4/tree/master/Projects/STM32F4-Discovery/Applications/Audio/Audio_playback_and_record
+
+
+## MEMs Microphone
+ST-MEMS audio sensor omni-directional digital microphone
+Vocoder project: https://github.com/Shaylin/stm32f4-discovery-vocoder (StdPeripheral Lib)
+
+Also this demo, record to USB from microphone, playback (not simultaneously) (StdPeripheral Lib)
+https://www.st.com/resource/en/application_note/an3997-audio-playback-and-recording-using-the-stm32f4discovery-stmicroelectronics.pdf
+STM32F4-Discovery_FW_V1.1.0/Project/Audio_playback_and_record
+
+## MEMS Accelerometer (LIS302DL)
+ST MEMS 3-axis accelerometer
+
+
+
+STM32F4-Discovery_FW_V1.1.0/Project/Peripheral_Examples/MEMS  (StdPeripheral Lib)
+If the board is moved the acceleration is detected on x/Y axis and LEDs toggles according to the motion direction and speed
+
+
+./STM32F4-Discovery_FW_V1.1.0/Utilities/STM32F4-Discovery/stm32f4_discovery_lis302dl.c
+
+# Notes:
+
+- confirmed that Stereo works
+- output seems a bit 'crispy'
+- strange clicks and pops within first few seconds of running
