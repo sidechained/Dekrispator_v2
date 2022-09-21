@@ -1,16 +1,6 @@
-/*
- * MIDI_application.c
- *
- *  First created on: 6 dec. 2014
- *      Author: Xavier Halgand
- */
+// Author: Xavier Halgand & Graham Booth
 
-/* Includes ------------------------------------------------------------------*/
-
-//#include "main.h"
 #include "MIDI_application.h"
-
-/* Private define ------------------------------------------------------------*/
 
 #define RX_BUFF_SIZE 64 /* USB MIDI buffer : max received data 64 bytes */
 
@@ -21,15 +11,8 @@ int8_t velocity;
 uint8_t notes_On[128] = {0};
 int8_t notesCount = 0; // number of notes on (keys pressed)
 
-/* Private function prototypes -----------------------------------------------*/
 void ProcessReceivedMidiDatas(void);
 
-/*-----------------------------------------------------------------------------*/
-/**
- * @brief  Main routine for MIDI application, looped in main.c
- * @param  None
- * @retval none
- */
 void MIDI_Application(void)
 {
 	if (Appli_state == APPLICATION_READY)
@@ -39,9 +22,8 @@ void MIDI_Application(void)
 	}
 	if (Appli_state == APPLICATION_RUNNING)
 	{
-		//....pffff......grrrrr......
+		// DO NOTHING
 	}
-
 	if (Appli_state == APPLICATION_DISCONNECT)
 	{
 		Appli_state = APPLICATION_IDLE;
@@ -49,19 +31,12 @@ void MIDI_Application(void)
 	}
 }
 
-/*-----------------------------------------------------------------------------*/
-/**
- * @brief  MIDI data receive callback.
- * @param  phost: Host handle
- * @retval None
- */
 void USBH_MIDI_ReceiveCallback(USBH_HandleTypeDef *phost)
 {
 	ProcessReceivedMidiDatas();
 	USBH_MIDI_Receive(&hUSBHost, MIDI_RX_Buffer, RX_BUFF_SIZE); // start a new reception
 }
 
-/*-----------------------------------------------------------------------------*/
 void Reset_notes_On(void)
 {
 	notesCount = 0;
@@ -69,18 +44,11 @@ void Reset_notes_On(void)
 		notes_On[i] = 0;
 }
 
-/*-----------------------------------------------------------------------------*/
 void ProcessReceivedMidiDatas(void)
 {
 	uint16_t numberOfPackets;
 	uint8_t *ptr = MIDI_RX_Buffer;
 	midi_package_t pack;
-
-	//	if (notesCount < 0) {
-	//		BSP_LED_On(LED_Red);
-	//	} else {
-	//		BSP_LED_Off(LED_Red);
-	//	}
 
 	numberOfPackets = USBH_MIDI_GetLastReceivedDataSize(&hUSBHost) / 4; //each USB midi package is 4 bytes long
 
@@ -106,7 +74,7 @@ void ProcessReceivedMidiDatas(void)
 			notesCount--;
 			if (notesCount <= 0) // no more keys pressed
 			{
-				//ADSR_keyOff(&adsr);
+				// NOTE OFF FUNCTION CALL GOES HERE
 				notesCount = 0;
 			}
 			else // some keys still pressed... (legato)
@@ -138,12 +106,7 @@ void ProcessReceivedMidiDatas(void)
 				{
 					currentNote = noteOn - LOWEST_NOTE; // conversion for notesFreq[]
 				}
-				// if (notesCount <= 0) // if just one key pressed
-				// {
-				// 	ADSR_keyOn(&adsr);
-				// 	notesCount = 0;
-				// }
-				//ADSR_keyOn(&adsr);
+				// NOTE ON FUNCTION CALL GOES HERE
 				notesCount++;
 				notes_On[noteOn] = 1;
 			}
@@ -154,7 +117,7 @@ void ProcessReceivedMidiDatas(void)
 				notesCount--;
 				if (notesCount <= 0)
 				{
-					//ADSR_keyOff(&adsr);
+					// NOTE OFF FUNCTION CALL GOES HERE
 					notesCount = 0;
 				}
 				else
@@ -174,14 +137,13 @@ void ProcessReceivedMidiDatas(void)
 		}
 		else if ((pack.evnt0 & 0xF0) == 0xA0) // Aftertouch
 		{
-			// Filter1Res_set(pack.evnt2);
+			// AFTERTOUCH FUNCTION CALL GOES HERE(pack.evnt2);
 		}
 		else if ((pack.evnt0 & 0xF0) == 0xE0) // Pitch Bend
 		{
+			// PITCHBEND FUNCTION CALL GOES HERE(pack.evnt2);
 			// int16_t pitchBend = ((pack.evnt1 << 7) + pack.evnt2) - 0x2000;
 		}
-
-		/*------------------------------------------------------------------------------------------*/
 
 		if ((pack.evnt0 & 0xF0) == 0xB0) /* If incoming midi message is a Control Change... */
 		{
@@ -189,6 +151,8 @@ void ProcessReceivedMidiDatas(void)
 
 			switch (pack.evnt1) // CC number
 			{
+			// MIDI CC MAPPING FOR KORG NANOKONTROL 2
+
 			// FADERS 1-8
 			case 0:
 				set_filter_cutoffFreqL(val);
@@ -295,13 +259,29 @@ void ProcessReceivedMidiDatas(void)
 
 			// // RECORD ARM BUTTONS 1-8 (commented out as these currently play notes 96-103)
 			// case 64:
+			// 	// unmapped
+			// 	break;
 			// case 65:
+			// 	// unmapped
+			// 	break;
 			// case 66:
+			// 	// unmapped
+			// 	break;
 			// case 67:
+			// 	// unmapped
+			// 	break;
 			// case 68:
+			// 	// unmapped
+			// 	break;
 			// case 69:
+			// 	// unmapped
+			// 	break;
 			// case 70:
+			// 	// unmapped
+			// 	break;
 			// case 71:
+			// 	// unmapped
+			// 	break;
 
 			// LOWER TRANSPORT SECTION
 			case 43: // Rewind Button
@@ -342,5 +322,3 @@ void ProcessReceivedMidiDatas(void)
 		}
 	}
 }
-
-/*-----------------------------------------------------------------------------*/
