@@ -34,4 +34,4 @@ extern int8_t velocity;
 void Reset_notes_On(void);
 void MIDI_Application(void);
 
-#endif /* MIDI_APPLICATION_H_ */
+#endif
