@@ -174,13 +174,6 @@ void buildUserInterfacemydsp(mydsp* dsp, UIGlue* ui_interface) {
 	ui_interface->closeBox(ui_interface->uiInterface);
 }
 
-void buildEmbeddedUserInterfacemydsp(mydsp* dsp) {
-	synth_interface.slider1 = &dsp->fHslider0;
-	synth_interface.slider2 = &dsp->fHslider3;
-	synth_interface.slider3 = &dsp->fHslider1;
-	synth_interface.slider4 = &dsp->fHslider2;
-}
-
 void computemydsp(mydsp* dsp, int count, FAUSTFLOAT** RESTRICT inputs, FAUSTFLOAT** RESTRICT outputs) {
 	FAUSTFLOAT* output0 = outputs[0];
 	FAUSTFLOAT* output1 = outputs[1];
