@@ -8,6 +8,12 @@ MIDI_ApplicationTypeDef Appli_state = APPLICATION_IDLE;
 static void SystemClock_Config(void);
 static void USBH_UserProcess_callback(USBH_HandleTypeDef *pHost, uint8_t vId);
 
+// prevent annoying arm compile warnings:
+void _close(void) {}
+void _lseek(void) {}
+void _read(void) {}
+void _write(void) {}
+
 void ButtonPressed_action(void)
 {
 	// nothing to do 
