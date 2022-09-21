@@ -17,7 +17,6 @@
 #include <stdbool.h>
 #include "CONSTANTS.h"
 #include "MIDI_application.h"
-#include "random.h"
 #include "notesTables.h"
 #include "timers.h"
 

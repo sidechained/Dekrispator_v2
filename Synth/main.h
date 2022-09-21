@@ -19,7 +19,6 @@
 #include "usbh_MIDI.h"
 #include "MIDI_application.h"
 #include "timers.h"
-#include "random.h"
 #include "CONSTANTS.h"
 
 void Error_Handler(void);

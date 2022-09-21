@@ -34,9 +34,6 @@ int main(void)
 	// Initialize User Button
 	BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
 
-	// Initialize the on-board random number generator
-	randomGen_init();
-
 	Synth_Init();
 	audio_init();
 

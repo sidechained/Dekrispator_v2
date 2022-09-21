@@ -249,7 +249,6 @@ C_SRCS += \
 ../Synth/MIDI_application.c \
 ../Synth/audio_conf.c \
 ../Synth/main.c \
-../Synth/random.c \
 ../Synth/soundGen.c \
 ../Synth/stm32f4xx_it.c \
 ../Synth/system_stm32f4xx.c \
@@ -264,7 +263,6 @@ OBJS += \
 ./Synth/MIDI_application.o \
 ./Synth/audio_conf.o \
 ./Synth/main.o \
-./Synth/random.o \
 ./Synth/soundGen.o \
 ./Synth/startup_stm32f407xx.o \
 ./Synth/stm32f4xx_it.o \
@@ -279,7 +277,6 @@ C_DEPS += \
 ./Synth/MIDI_application.d \
 ./Synth/audio_conf.d \
 ./Synth/main.d \
-./Synth/random.d \
 ./Synth/soundGen.d \
 ./Synth/stm32f4xx_it.d \
 ./Synth/system_stm32f4xx.d \

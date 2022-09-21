@@ -12,7 +12,6 @@
 #include <stdbool.h>
 
 #include "CONSTANTS.h"
-#include "random.h"
 #include "notesTables.h"
 #include "audio_conf.h"
 
