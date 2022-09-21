@@ -12,7 +12,7 @@ Click 'compile', then 'download', then copy the contents of the downloaded folde
 
 Note: the code can have any name, but the filename must be added as an include statement in Synth/soundGen.c i.e
 
-'#include "mydsp.c"'
+`#include "mydsp.c"`
 
 Note: copied CInterface.h into Synth directory for now, which eliminates need to comment out 'meta' and 'ui' sections of mydsp.c code. More info [here](https://sourceforge.net/p/faudiostream/mailman/message/30907474/)
 
@@ -22,37 +22,99 @@ Faust code is typically developed using a simple onscreen User Interface with bu
 
 In our case we are using the Korg NanoKontrol2 and have modified the original MIDI_Application.c/.h to create a simple Control Change (CC) and Note mapping for all NanoKontrol2 controls. These call functions which can be inserted into the Faust code, replacing the original user interface code elements.
 
-
 ## How are faust synth parameters actually controlled?
 
-Looking at STM32F4-Synth example...
-(REMEMBER: this is written in C++)
-..they define a synth_interface in synth.h (floats):
+1. In mydsp.c, we need to add a function which will connect a synth interface to the places in memory where faust has already defined it's graphical ui_interface.
 
+`
+void buildEmbeddedUserInterfacemydsp(mydsp* dsp) {
+      synth_interface.slider1 = &dsp->fHslider0;
+      synth_interface.slider2 = &dsp->fHslider3;
+      synth_interface.slider3 = &dsp->fHslider1;
+      synth_interface.slider4 = &dsp->fHslider2;
+}
+`
+
+2. In soundGen.c, we have already created a struct which will be used to interface with these existing values
+
+`
 typedef struct struct_synth_interface {
-	float* acc_abs;
-	float* acc_x;
-	float* acc_y;
-	float* acc_z;
+    float* slider1;
+    float* slider2;
+    float* slider3;
+    float* slider4;
 } synth_interface_t;
 
-extern synth_interface_t synth_interface;
-extern synth_interface_t synth_interface_bas;
+synth_interface_t synth_interface;
+`
 
-This structure then receives the values coming from the accelerometer in main.c thread:
+3. Then - also in soundGen.c - when intialising the synth we add a call to the 'buildEmbeddedUserInterfacemydsp' function. We also set some parameters to initial values here.
 
-*(synth_interface.acc_abs) = acc_abs;
+ Note that all parameters are scaled as in the original code (i.e. freq's operate from 50-10000, not as 0. - 1. floats). Which means we have to roll our own scaling when hooking up to the MIDI interface
 
-But how does this connect to the code in synth.cpp? Currently the interface is declared there but nothing happens with it. My guess would be the python script is supposed to modify the standard buildUserInterface function to use 'buildUserInterfaceEmbedded', which would then setup these links. simple-synth branch doesn't help as it operates without faust.
+`
+void Synth_Init(void) {
+    dsp = newmydsp();
+    initmydsp(dsp, SAMPLERATE);
+    buildEmbeddedUserInterfacemydsp(dsp);
+    *(synth_interface.slider1) = 10000; // "[0]cutoffFrequencyL",500,50,10000,0.01    
+    *(synth_interface.slider2) = 10000; // "[1]cutoffFrequencyR",500,50,10000,0.01
+    *(synth_interface.slider3) = 1; // "[2]q",5,1,30,0.1);
+    *(synth_interface.slider3) = 1; // "[3]gain",1,0,1,0.01); 
+}
+`
 
-Now looking at what the python script does...
+## Adding MIDI Control
 
-it takes references to interfaceAdd (now called ui_interfaceAdd) e.g.
+- Now we need to allow access to the synth interface from our MIDI_Application.c code, as follows:
 
-ui_interface->addHorizontalSlider(ui_interface->uiInterface, "cutoffFrequencyL", &dsp->fHslider0, (FAUSTFLOAT)5e+02f, (FAUSTFLOAT)5e+01f, (FAUSTFLOAT)1e+04f, (FAUSTFLOAT)0.01f);
+1. In soundGen.c, add four functions to allow outside access to the synth interface (not forgetting to also add their prototypes to soundGen.h)
 
+`
+void set_filter_cutoffFreqL(int val) {
+    float floval;
+    floval = ((float)val/127) * 9950 + 50;
+    *(synth_interface.slider1) = floval; // "[0]cutoffFrequencyL",500,50,10000,0.01   
+}
 
+void set_filter_cutoffFreqR(int val) {
+    float floval;
+    floval = ((float)val/127) * 9950 + 50;
+    *(synth_interface.slider2) = floval; // "[1]cutoffFrequencyR",500,50,10000,0.01  
+}
 
+void set_filter_q(int val) {
+    float floval;
+    floval = ((float)val/127) * 29 + 1;
+    *(synth_interface.slider3) = floval; // "[2]q",5,1,30,0.1);  
+}
+
+void set_filter_gain(int val) {
+    float floval;
+    floval = (float)val/127;
+    *(synth_interface.slider4) = floval; // "[3]gain",1,0,1,0.01);    
+}
+`
+
+- Note that MIDI CC values come in as integers in the 0-127 range. Each function above handles the scaling necessary to get from this range to the range we require i.e. in the case of a filter cutoff frequency between 50-10000Hz
+
+2. Now in MIDI_Application.c, we add calls to the above functions from whichever control we would like to affect that parameter (in our case NanoKontrol2 faders 1-4).
+
+`
+// FADERS 1-8
+case 0:
+      set_filter_cutoffFreqL(val);
+      break;
+case 1:
+      set_filter_cutoffFreqR(val);
+      break;
+case 2:
+      set_filter_q(val);
+      break;
+case 3:
+      set_filter_gain(val);
+      break;
+`
 
 # Further Aims:
 

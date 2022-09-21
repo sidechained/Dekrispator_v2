@@ -191,16 +191,16 @@ void ProcessReceivedMidiDatas(void)
 			{
 			// FADERS 1-8
 			case 0:
-				// unmapped
+				set_filter_cutoffFreqL(val);
 				break;
 			case 1:
-				// unmapped
+				set_filter_cutoffFreqR(val);
 				break;
 			case 2:
-				// unmapped
+				set_filter_q(val);
 				break;
 			case 3:
-				// unmapped
+				set_filter_gain(val);
 				break;
 			case 4:
 				// unmapped

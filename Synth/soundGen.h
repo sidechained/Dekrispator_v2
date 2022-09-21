@@ -24,7 +24,10 @@
 /* Exported functions ------------------------------------------------------- */
 
 void Synth_Init(void);
-
+void set_filter_cutoffFreqL(int val);
+void set_filter_cutoffFreqR(int val);
+void set_filter_q(int val);
+void set_filter_gain(int val);
 void make_sound(uint16_t *buf , uint16_t len);
 
 #endif /* __SOUNDGEN_H */

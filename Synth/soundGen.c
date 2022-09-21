@@ -50,10 +50,35 @@ void Synth_Init(void) {
     dsp = newmydsp();
     initmydsp(dsp, SAMPLERATE);
     buildEmbeddedUserInterfacemydsp(dsp);
-    *(synth_interface.slider1) = 3000; // "[0]cutoffFrequencyL",500,50,10000,0.01
-    *(synth_interface.slider2) = 500; // "[1]cutoffFrequencyR",500,50,10000,0.01
-    *(synth_interface.slider3) = 10; // "[2]q",5,1,30,0.1);
-    *(synth_interface.slider4) = 0.7; // "[3]gain",1,0,1,0.01);
+    // initial values:
+    *(synth_interface.slider1) = 10000; // "[0]cutoffFrequencyL",500,50,10000,0.01    
+    *(synth_interface.slider2) = 10000; // "[1]cutoffFrequencyR",500,50,10000,0.01
+    *(synth_interface.slider3) = 1; // "[2]q",5,1,30,0.1);
+    *(synth_interface.slider3) = 1; // "[3]gain",1,0,1,0.01); 
+}
+
+void set_filter_cutoffFreqL(int val) {
+    float floval;
+    floval = ((float)val/127) * 9950 + 50;
+    *(synth_interface.slider1) = floval; // "[0]cutoffFrequencyL",500,50,10000,0.01   
+}
+
+void set_filter_cutoffFreqR(int val) {
+    float floval;
+    floval = ((float)val/127) * 9950 + 50;
+    *(synth_interface.slider2) = floval; // "[1]cutoffFrequencyR",500,50,10000,0.01  
+}
+
+void set_filter_q(int val) {
+    float floval;
+    floval = ((float)val/127) * 29 + 1;
+    *(synth_interface.slider3) = floval; // "[2]q",5,1,30,0.1);  
+}
+
+void set_filter_gain(int val) {
+    float floval;
+    floval = (float)val/127;
+    *(synth_interface.slider4) = floval; // "[3]gain",1,0,1,0.01);    
 }
 
 void make_sound(uint16_t *buf, uint16_t len) // BUF_LEN_DIV4
