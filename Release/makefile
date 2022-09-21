@@ -1,37 +1,17 @@
-################################################################################
 ARM_PATH=/Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/
 
--include ../makefile.init
-
-RM := rm -rf
-
-# All of the sources participating in the build are defined here
-
-# SOURCES
-
-C_SRCS := 
-S_UPPER_SRCS := 
-O_SRCS := 
-OBJS := 
-SECONDARY_FLASH := 
-SECONDARY_LIST := 
-SECONDARY_SIZE := 
-ASM_DEPS := 
-S_UPPER_DEPS := 
-C_DEPS := 
+# ../drivers/STM32_USB_Host_Library/Core/Src/
+# ../drivers/STM32F4xx_HAL_Driver/Src/
+# ../drivers/BSP/
+# ../Synth/
 
 # DRIVERS - USBH_midi_class
-
 C_SRCS += ../drivers/USBH_midi_class/Src/usbh_MIDI.c 
 OBJS += ./drivers/USBH_midi_class/Src/usbh_MIDI.o 
 C_DEPS += ./drivers/USBH_midi_class/Src/usbh_MIDI.d 
 
 drivers/USBH_midi_class/Src/%.o: ../drivers/USBH_midi_class/Src/%.c
-	@echo 'Building file: $<'
-	@echo 'Invoking: Cross ARM C Compiler'
 	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
 
 # DRIVERS - STM32_USB_Host_Library
 C_SRCS += \
@@ -53,14 +33,9 @@ C_DEPS += \
 ./drivers/STM32_USB_Host_Library/Core/Src/usbh_pipes.d 
 
 drivers/STM32_USB_Host_Library/Core/Src/%.o: ../drivers/STM32_USB_Host_Library/Core/Src/%.c
-	@echo 'Building file: $<'
-	@echo 'Invoking: Cross ARM C Compiler'
 	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
 
 # DRIVERS - STM32F4xx_HAL_Driver
-
 C_SRCS += \
 ../drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c \
 ../drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c \
@@ -238,16 +213,10 @@ C_DEPS += \
 ./drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.d \
 ./drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.d 
 
-
 drivers/STM32F4xx_HAL_Driver/Src/%.o: ../drivers/STM32F4xx_HAL_Driver/Src/%.c
-	@echo 'Building file: $<'
-	@echo 'Invoking: Cross ARM C Compiler'
 	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
 
 # DRIVERS - BSP
-
 C_SRCS += \
 ../drivers/BSP/cs43l22.c \
 ../drivers/BSP/lis302dl.c \
@@ -272,17 +241,10 @@ C_DEPS += \
 ./drivers/BSP/stm32f4_discovery_accelerometer.d \
 ./drivers/BSP/stm32f4_discovery_audio.d 
 
-
 drivers/BSP/%.o: ../drivers/BSP/%.c
-	@echo 'Building file: $<'
-	@echo 'Invoking: Cross ARM C Compiler'
 	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
-
 
 # SYNTH
-
 C_SRCS += \
 ../Synth/MIDI_application.c \
 ../Synth/audio_conf.c \
@@ -294,6 +256,7 @@ C_SRCS += \
 ../Synth/timers.c \
 ../Synth/usbh_conf.c 
 
+# WARNING THIS IS NOT REFERENCED ANYWHERE!!
 S_UPPER_SRCS += \
 ../Synth/startup_stm32f407xx.S 
 
@@ -323,85 +286,37 @@ C_DEPS += \
 ./Synth/timers.d \
 ./Synth/usbh_conf.d 
 
-
 Synth/%.o: ../Synth/%.c
-	@echo 'Building file: $<'
-	@echo 'Invoking: Cross ARM C Compiler'
 	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
 
 Synth/%.o: ../Synth/%.S
-	@echo 'Building file: $<'
-	@echo 'Invoking: Cross ARM GNU Assembler'
 	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -x assembler-with-cpp -DSTM32F40_41xxx -D__FPU_USED=1 -DHSE_VALUE=8000000 -DSTM32F407VG -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
 
 # OBJECTS
 
-USER_OBJS :=
-
-LIBS := -lm -lc -lg
-
-ifneq ($(MAKECMDGOALS),clean)
-ifneq ($(strip $(ASM_DEPS)),)
--include $(ASM_DEPS)
-endif
 ifneq ($(strip $(S_UPPER_DEPS)),)
 -include $(S_UPPER_DEPS)
 endif
 ifneq ($(strip $(C_DEPS)),)
 -include $(C_DEPS)
 endif
-endif
 
--include ../makefile.defs
+all: Dekrispator_v2.elf Dekrispator_v2.bin Dekrispator_v2.lst Dekrispator_v2.siz
 
-SECONDARY_FLASH += \
-Dekrispator_v2.bin \
-
-SECONDARY_LIST += \
-Dekrispator_v2.lst \
-
-SECONDARY_SIZE += \
-Dekrispator_v2.siz \
-
-all: Dekrispator_v2.elf secondary-outputs
-
-Dekrispator_v2.elf: $(OBJS) $(USER_OBJS)
-	@echo 'Building target: $@'
-	@echo 'Invoking: Cross ARM C Linker'
-	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -T "../STM32F407VG_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"Dekrispator_v2.map" --specs=nosys.specs -o "Dekrispator_v2.elf" $(OBJS) $(USER_OBJS) $(LIBS)
-	@echo 'Finished building target: $@'
-	@echo ' '
+Dekrispator_v2.elf: $(OBJS)
+	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -T "../STM32F407VG_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"Dekrispator_v2.map" --specs=nosys.specs -o "Dekrispator_v2.elf" $(OBJS) -lm -lc -lg
 
 Dekrispator_v2.bin: Dekrispator_v2.elf
-	@echo 'Invoking: Cross ARM GNU Create Flash Image'
 	$(ARM_PATH)arm-none-eabi-objcopy -O binary "Dekrispator_v2.elf"  "Dekrispator_v2.bin"
-	@echo 'Finished building: $@'
-	@echo ' '
 
 Dekrispator_v2.lst: Dekrispator_v2.elf
-	@echo 'Invoking: Cross ARM GNU Create Listing'
 	$(ARM_PATH)arm-none-eabi-objdump --source --all-headers --demangle --line-numbers --wide "Dekrispator_v2.elf" > "Dekrispator_v2.lst"
-	@echo 'Finished building: $@'
-	@echo ' '
 
 Dekrispator_v2.siz: Dekrispator_v2.elf
-	@echo 'Invoking: Cross ARM GNU Print Size'
 	$(ARM_PATH)arm-none-eabi-size --format=berkeley --totals "Dekrispator_v2.elf"
-	@echo 'Finished building: $@'
-	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(SECONDARY_FLASH)$(SECONDARY_LIST)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_UPPER_DEPS)$(C_DEPS) Dekrispator_v2.elf
-	-@echo ' '
-
-secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_LIST) $(SECONDARY_SIZE)
-
+	-rm -rf $(OBJS) Dekrispator_v2.bin Dekrispator_v2.lst Dekrispator_v2.siz $(S_UPPER_DEPS)$(C_DEPS) Dekrispator_v2.elf
+	
 .PHONY: all clean dependents
-.SECONDARY:
-
--include ../makefile.targets
