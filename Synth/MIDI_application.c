@@ -7,6 +7,7 @@
 uint8_t MIDI_RX_Buffer[RX_BUFF_SIZE]; // MIDI reception buffer
 
 int8_t currentNote;
+int8_t lowestNote = 21;  /* Lowest note : 21 is MIDI note number for A0 */
 int8_t velocity;
 uint8_t notes_On[128] = {0};
 int8_t notesCount = 0; // number of notes on (keys pressed)
@@ -121,7 +122,7 @@ void ProcessReceivedMidiDatas(void)
 			}
 			else // some keys still pressed... (legato)
 			{
-				if ((noteOff - LOWEST_NOTE) == currentNote) // then let sound the lowest key pressed
+				if ((noteOff - lowestNote) == currentNote) // then let sound the lowest key pressed
 				{
 					uint8_t i;
 					for (i = 0; i < 128; i++)
@@ -129,7 +130,7 @@ void ProcessReceivedMidiDatas(void)
 						if (notes_On[i] == 1) // find the lowest key pressed
 							break;
 					}
-					currentNote = i - LOWEST_NOTE; // conversion for notesFreq[]
+					currentNote = i - lowestNote; // conversion for notesFreq[]
 				}
 			}
 			//}
@@ -140,13 +141,13 @@ void ProcessReceivedMidiDatas(void)
 			velocity = pack.evnt2;
 			if (velocity > 0) // True note on !
 			{
-				if (noteOn < LOWEST_NOTE) // filtering notes
+				if (noteOn < lowestNote) // filtering notes
 				{
 					currentNote = 0;
 				}
 				else
 				{
-					currentNote = noteOn - LOWEST_NOTE; // conversion for notesFreq[]
+					currentNote = noteOn - lowestNote; // conversion for notesFreq[]
 				}
 				// NOTE ON FUNCTION CALL GOES HERE
 				notesCount++;
@@ -164,7 +165,7 @@ void ProcessReceivedMidiDatas(void)
 				}
 				else
 				{
-					if ((noteOn - LOWEST_NOTE) == currentNote)
+					if ((noteOn - lowestNote) == currentNote)
 					{
 						uint8_t i;
 						for (i = 0; i < 128; i++)
@@ -172,7 +173,7 @@ void ProcessReceivedMidiDatas(void)
 							if (notes_On[i] == 1) // find the lowest key pressed
 								break;
 						}
-						currentNote = i - LOWEST_NOTE; // conversion for notesFreq[]
+						currentNote = i - lowestNote; // conversion for notesFreq[]
 					}
 				}
 			}

@@ -14,10 +14,6 @@
 #include "CONSTANTS.h"
 #include "audio_conf.h"
 
-#define MAX_SCALE_INDEX		14	/* starting at 0 ! */
-#define LOWEST_NOTE			21  /* Lowest note : 21 is MIDI note number for A0 */
-#define MAX_NOTE_INDEX		106	/* starting at 0 ! */
-
 typedef enum
 {
 	APPLICATION_IDLE = 0,
