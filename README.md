@@ -26,9 +26,9 @@ gain = hslider("[3]gain",1,0,1,0.01);
 process = no.noise : _ <: fi.resonlp(cutl,q,gain),fi.resonlp(cutr,q,gain);
 ```
 
-Stereo filtered noise with four possible controls: filter Q, filter gain and separate cutoff frequencies for the left and right channels.
+This produces stereo filtered-noise with four possible filter controls: Q, gain and separate cutoff frequencies for the left and right channels.
 
-Once done, export the code from the IDE using the truck icon using the following settings:
+Once done, export the code from the IDE (via the truck icon) using the following settings:
 
 - File Name: 'mydsp'
 - Platform 'source'
@@ -38,9 +38,7 @@ Click 'compile', then 'download', then copy the contents of the downloaded folde
 
 ## 2. Writing a Set of User Interface Functions
 
-Faust code is typically developed using a simple Graphical User Interface with buttons/sliders etc. In our example stereo noise filter, we had four onscreen horizontal sliders controlling the four parameters.
-
-In Synth/mydsp.c, we can see 
+Faust code is typically developed using a simple Graphical User Interface with buttons/sliders etc. In our example stereo noise-filter, there were four onscreen horizontal sliders controlling the four parameters. In Synth/mydsp.c, we can see how these are set to their initial values:
 
 ```
 void instanceResetUserInterfacemydsp(mydsp* dsp) {
@@ -51,7 +49,7 @@ void instanceResetUserInterfacemydsp(mydsp* dsp) {
 }
 ```
 
-And further down in the same file we can see what parameters they control (some lines have been omitted for clarity):
+In addition, further down in the same file we can see what parameters they control (some lines have been omitted here for clarity):
 
 ```
 void buildUserInterfacemydsp(mydsp* dsp, UIGlue* ui_interface) {
@@ -62,7 +60,7 @@ void buildUserInterfacemydsp(mydsp* dsp, UIGlue* ui_interface) {
 }
 ```
 
-By writing a set of user interface functions and placing them in soundGen.c, we can expose the existing faust interface to MIDI control. In Synth/soundGen.c, I have already done this for the four controls above, as follows (not forgetting to also add their prototypes to soundGen.h):
+So by writing a set of user interface functions in Synth/soundGen.c, we can expose the existing faust interface to MIDI control. As you can see in what follows, I have already done this for the four controls above (not forgetting to also add their prototypes to soundGen.h):
 
 ```
 void set_filter_cutoffFreqL(int val) {
