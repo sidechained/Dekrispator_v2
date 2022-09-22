@@ -23,13 +23,15 @@ S_UPPER_SRCS += \
 C_SRCS += \
 ../drivers/usbh_conf.c \
 ../drivers/stm32f4xx_it.c \
-../drivers/system_stm32f4xx.c
+../drivers/system_stm32f4xx.c \
+../drivers/timers.c \
 
 OBJS += \
 ./drivers/usbh_conf.o \
 ./drivers/stm32f4xx_it.o \
 ./drivers/system_stm32f4xx.o \
-./drivers/startup_stm32f407xx.o
+./drivers/startup_stm32f407xx.o \
+./drivers/timers.o \
 
 S_UPPER_DEPS += \
 ./drivers/startup_stm32f407xx.d 
@@ -37,7 +39,8 @@ S_UPPER_DEPS += \
 C_DEPS += \
 ./drivers/usbh_conf.d \
 ./drivers/stm32f4xx_it.d \
-./drivers/system_stm32f4xx.d
+./drivers/system_stm32f4xx.d \
+./drivers/timers.d \
 
 drivers/%.o: ../drivers/%.c
 	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx $(INCS) -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
@@ -290,21 +293,18 @@ C_SRCS += \
 ../Synth/audio_conf.c \
 ../Synth/main.c \
 ../Synth/soundGen.c \
-../Synth/timers.c \
 
 OBJS += \
 ./Synth/MIDI_application.o \
 ./Synth/audio_conf.o \
 ./Synth/main.o \
 ./Synth/soundGen.o \
-./Synth/timers.o \
 
 C_DEPS += \
 ./Synth/MIDI_application.d \
 ./Synth/audio_conf.d \
 ./Synth/main.d \
 ./Synth/soundGen.d \
-./Synth/timers.d \
 
 Synth/%.o: ../Synth/%.c
 	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx $(INCS) -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
