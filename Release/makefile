@@ -1,9 +1,19 @@
 ARM_PATH=/Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/
-
+FAUST_PATH=/Applications/Faust-2.41.1/
 # ../drivers/STM32_USB_Host_Library/Core/Src/
 # ../drivers/STM32F4xx_HAL_Driver/Src/
 # ../drivers/BSP/
 # ../Synth/
+
+INCS = \
+-I.././drivers/STM32_USB_Host_Library/Core/Inc \
+-I../drivers/BSP \
+-I../drivers/cmsis \
+-I../drivers/STM32F4xx_HAL_Driver/Inc \
+-I../drivers \
+-I../drivers/USBH_midi_class/Inc \
+-I../Synth \
+-I$(FAUST_PATH)include/faust/gui
 
 # DRIVERS - Root
 
@@ -30,7 +40,7 @@ C_DEPS += \
 ./drivers/system_stm32f4xx.d
 
 drivers/%.o: ../drivers/%.c
-	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
+	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx $(INCS) -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
 
 drivers/%.o: ../drivers/%.S
 	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -x assembler-with-cpp -DSTM32F40_41xxx -D__FPU_USED=1 -DHSE_VALUE=8000000 -DSTM32F407VG -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
@@ -41,7 +51,7 @@ OBJS += ./drivers/USBH_midi_class/Src/usbh_MIDI.o
 C_DEPS += ./drivers/USBH_midi_class/Src/usbh_MIDI.d 
 
 drivers/USBH_midi_class/Src/%.o: ../drivers/USBH_midi_class/Src/%.c
-	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
+	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx $(INCS) -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
 
 # DRIVERS - STM32_USB_Host_Library
 C_SRCS += \
@@ -63,7 +73,7 @@ C_DEPS += \
 ./drivers/STM32_USB_Host_Library/Core/Src/usbh_pipes.d 
 
 drivers/STM32_USB_Host_Library/Core/Src/%.o: ../drivers/STM32_USB_Host_Library/Core/Src/%.c
-	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
+	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx $(INCS) -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
 
 # DRIVERS - STM32F4xx_HAL_Driver
 C_SRCS += \
@@ -244,7 +254,7 @@ C_DEPS += \
 ./drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.d 
 
 drivers/STM32F4xx_HAL_Driver/Src/%.o: ../drivers/STM32F4xx_HAL_Driver/Src/%.c
-	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
+	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx $(INCS) -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
 
 # DRIVERS - BSP
 C_SRCS += \
@@ -272,7 +282,7 @@ C_DEPS += \
 ./drivers/BSP/stm32f4_discovery_audio.d 
 
 drivers/BSP/%.o: ../drivers/BSP/%.c
-	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
+	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx $(INCS) -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
 
 # SYNTH
 C_SRCS += \
@@ -297,7 +307,7 @@ C_DEPS += \
 ./Synth/timers.d \
 
 Synth/%.o: ../Synth/%.c
-	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx -I.././drivers/STM32_USB_Host_Library/Core/Inc -I../drivers/BSP -I../drivers/cmsis -I../drivers/STM32F4xx_HAL_Driver/Inc -I../Synth -I../drivers -I../drivers/USBH_midi_class/Inc -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
+	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -D__FPU_USED=1 -DHSE_VALUE=8000000 -DUSE_HAL_DRIVER -DUSE_STM32F4_DISCO -DSTM32F407xx $(INCS) -std=c11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
 
 # OBJECTS
 

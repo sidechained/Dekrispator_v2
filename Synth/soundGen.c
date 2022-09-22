@@ -1,7 +1,7 @@
 // Author: Xavier Halgand
 
 #include "soundGen.h"
-#include "CInterface.h"
+#include "CInterface.h" // For MetaGlue and UIGlue located in /Applications/Faust-2.41.1/include/faust/gui
 
 #include "mydsp.c"
 

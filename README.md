@@ -10,7 +10,10 @@ In short:
 - write some Faust code and export it as C source code
 - define a set of interface functions in Synth/soundGen.c
 - call them from Synth/MIDI_Application.c
+- install [arm toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)* and [Faust](https://faust.grame.fr/downloads/) on your system and edit ARM_PATH and FAUST_PATH makefile entries to reference the correct locations of these on your system
 - rebuild the project, flash it to the board and have fun!
+
+* Note: I used 'arm-gnu-toolchain-12.2.MPACBTI-Bet1-darwin-x86_64-arm-none-eabi.pkg'
 
 ## 1. Writing/Exporting Faust Code
 
