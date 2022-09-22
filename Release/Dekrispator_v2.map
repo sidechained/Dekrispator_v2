@@ -71,11 +71,11 @@ Archive member included to satisfy reference by file (symbol)
 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
                               /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-exit.o) (_exit)
 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-calloc.o)
-                              /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o (calloc)
+                              /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o (calloc)
 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-callocr.o)
                               /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-calloc.o) (_calloc_r)
 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-malloc.o)
-                              /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o (malloc)
+                              /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o (malloc)
 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-errno.o)
                               /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-callocr.o) (__errno)
 
@@ -106,24 +106,23 @@ Discarded input sections
  .debug_str     0x0000000000000000       0xf8 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .ARM.attributes
                 0x0000000000000000       0x1c /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
- .text          0x0000000000000000        0x0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .data          0x0000000000000000        0x0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .bss           0x0000000000000000        0x0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.HAL_MspInit
-                0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text._lseek   0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text._read    0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text._write   0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+ .text          0x0000000000000000        0x0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .data          0x0000000000000000        0x0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .bss           0x0000000000000000        0x0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text._close   0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text._lseek   0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text._read    0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text._write   0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.TimeRecBase
-                0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .bss.debug.0   0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .bss.debug.0   0x0000000000000000        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .data.AHBPrescTable
-                0x0000000000000000       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000000000000       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .data.AudioInVolume
-                0x0000000000000000        0x2 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text          0x0000000000000000       0x14 ./Synth/startup_stm32f407xx.o
- .data          0x0000000000000000        0x0 ./Synth/startup_stm32f407xx.o
- .bss           0x0000000000000000        0x0 ./Synth/startup_stm32f407xx.o
+                0x0000000000000000        0x2 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text          0x0000000000000000       0x14 ./drivers/startup_stm32f407xx.o
+ .data          0x0000000000000000        0x0 ./drivers/startup_stm32f407xx.o
+ .bss           0x0000000000000000        0x0 ./drivers/startup_stm32f407xx.o
  .text          0x0000000000000000        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_tan.o)
  .data          0x0000000000000000        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_tan.o)
  .bss           0x0000000000000000        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_tan.o)
@@ -532,8 +531,12 @@ Linker script and memory map
 LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
 LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+LOAD ./drivers/usbh_conf.o
+LOAD /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+LOAD ./drivers/stm32f4xx_it.o
+LOAD ./drivers/system_stm32f4xx.o
+LOAD ./drivers/startup_stm32f407xx.o
 LOAD ./drivers/USBH_midi_class/Src/usbh_MIDI.o
-LOAD /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
 LOAD ./drivers/STM32_USB_Host_Library/Core/Src/usbh_core.o
 LOAD ./drivers/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.o
 LOAD ./drivers/STM32_USB_Host_Library/Core/Src/usbh_ioreq.o
@@ -605,11 +608,7 @@ LOAD ./Synth/MIDI_application.o
 LOAD ./Synth/audio_conf.o
 LOAD ./Synth/main.o
 LOAD ./Synth/soundGen.o
-LOAD ./Synth/startup_stm32f407xx.o
-LOAD ./Synth/stm32f4xx_it.o
-LOAD ./Synth/system_stm32f4xx.o
 LOAD ./Synth/timers.o
-LOAD ./Synth/usbh_conf.o
 LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
 LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
 LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a
@@ -631,11 +630,11 @@ LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-no
 .isr_vector     0x0000000008000000      0x188
                 0x0000000008000000                . = ALIGN (0x4)
  *(.isr_vector)
- .isr_vector    0x0000000008000000      0x188 ./Synth/startup_stm32f407xx.o
+ .isr_vector    0x0000000008000000      0x188 ./drivers/startup_stm32f407xx.o
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000188                . = ALIGN (0x4)
 
-.text           0x0000000008000188     0x8a68
+.text           0x0000000008000188     0x8a60
                 0x0000000008000188                . = ALIGN (0x4)
  *(.text)
  *(.text*)
@@ -648,394 +647,394 @@ LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .text.frame_dummy
                 0x00000000080001f0       0x24 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .text.USB_HC_StartXfer
-                0x0000000008000214      0x280 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008000214      0x280 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USB_HC_ReadInterrupt
-                0x0000000008000494       0x20 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008000494       0x20 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USB_HC_Halt
-                0x00000000080004b4      0x1f4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000080004b4      0x1f4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USB_DoPing
-                0x00000000080006a8       0x80 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000080006a8       0x80 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USB_StopHost
-                0x0000000008000728      0x108 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.USBH_MIDI_ClassRequest
-                0x0000000008000830       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.USBH_MIDI_SOFProcess
-                0x0000000008000840        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.HAL_Delay
-                0x0000000008000844       0x1c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.HAL_DMA_IRQHandler
-                0x0000000008000860     0x1d44 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.HAL_GPIO_Init
-                0x00000000080025a4      0x28c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.I2S_DMAError
-                0x0000000008002830       0x2c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.HAL_RCC_GetHCLKFreq
-                0x000000000800285c       0xac /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008000728      0x108 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USB_EnableGlobalInt
-                0x0000000008002908       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008000830       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.USBH_MIDI_ClassRequest
+                0x0000000008000840       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.USBH_MIDI_SOFProcess
+                0x0000000008000850        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.HAL_Delay
+                0x0000000008000854       0x1c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.HAL_DMA_IRQHandler
+                0x0000000008000870     0x1d44 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.HAL_GPIO_Init
+                0x00000000080025b4      0x28c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.I2S_DMAError
+                0x0000000008002840       0x2c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.HAL_RCC_GetHCLKFreq
+                0x000000000800286c       0xac /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USB_DisableGlobalInt
-                0x0000000008002918       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008002918       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USB_FlushTxFifo
-                0x0000000008002928       0x24 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008002928       0x24 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USB_FlushRxFifo
-                0x000000000800294c       0x20 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x000000000800294c       0x20 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USB_WritePacket
-                0x000000000800296c       0x30 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x000000000800296c       0x30 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.cs43l22_SetFrequency
-                0x000000000800299c        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x000000000800299c        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.BSP_LED_Init
-                0x00000000080029a0      0x310 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000080029a0      0x310 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.HAL_NVIC_SetPriority.constprop.0
-                0x0000000008002cb0       0x5c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008002cb0       0x5c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.I2Cx_Init.part.0
-                0x0000000008002d0c      0x1a0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008002d0c      0x1a0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.AUDIO_IO_Init
-                0x0000000008002eac       0x78 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008002eac       0x78 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USBH_LL_OpenPipe.isra.0
-                0x0000000008002f24       0xec /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008002f24       0xec /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USBH_UserProcess_callback
-                0x0000000008003010       0x60 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008003010       0x60 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.HAL_InitTick.constprop.0.isra.0
-                0x0000000008003070       0x44 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008003070       0x44 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USB_CoreReset.isra.0
-                0x00000000080030b4       0x2c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000080030b4       0x2c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.USBH_MIDI_InterfaceInit
-                0x00000000080030e0      0x55c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000080030e0      0x55c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.cs43l22_ReadID
-                0x000000000800363c      0x1c0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x000000000800363c      0x1c0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.HAL_I2C_Mem_Write.part.0.constprop.0
-                0x00000000080037fc       0xa0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000080037fc       0xa0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.cs43l22_Play
-                0x000000000800389c      0x220 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x000000000800389c      0x220 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.cs43l22_Pause
-                0x0000000008003abc      0x210 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008003abc      0x210 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.cs43l22_Resume
-                0x0000000008003ccc      0x330 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008003ccc      0x330 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.cs43l22_Stop
-                0x0000000008003ffc      0x218 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008003ffc      0x218 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.I2Cx_WriteData
-                0x0000000008004214      0x108 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008004214      0x108 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.cs43l22_SetVolume
-                0x000000000800431c      0x244 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x000000000800431c      0x23c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.cs43l22_Init
-                0x0000000008004560       0xfc /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008004558       0xfc /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.cs43l22_SetMute
-                0x000000000800465c      0x1a4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008004654      0x1a4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.cs43l22_SetOutputMode
-                0x0000000008004800      0x178 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000080047f8      0x178 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.computemydsp.constprop.0
-                0x0000000008004978      0x19c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008004970      0x19c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.I2S_DMATxCplt
-                0x0000000008004b14       0xdc /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008004b0c       0xdc /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.I2S_DMATxHalfCplt
-                0x0000000008004bf0       0x84 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.BSP_AUDIO_OUT_Error_CallBack
-                0x0000000008004c74        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x0000000008004c74                HardFault_Handler
- .text.USBH_MIDI_InterfaceDeInit
-                0x0000000008004c78       0xa8 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.USBH_CtlSendData.constprop.0.isra.0
-                0x0000000008004d20       0x84 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.USBH_CtlReq.part.0
-                0x0000000008004da4      0x288 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.USBH_MIDI_Process
-                0x000000000800502c      0x484 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.USBH_Get_StringDesc.constprop.0
-                0x00000000080054b0       0x78 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.USBH_Get_DevDesc.constprop.0
-                0x0000000008005528       0xa0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .text.startup.main
-                0x00000000080055c8     0x1410 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x00000000080055c8                main
+                0x0000000008004be8       0x84 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .text.NMI_Handler
-                0x00000000080069d8        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x00000000080069d8                NMI_Handler
+                0x0000000008004c6c        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004c6c                NMI_Handler
+ .text.HardFault_Handler
+                0x0000000008004c70        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004c70                HardFault_Handler
  .text.MemManage_Handler
-                0x00000000080069dc        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x00000000080069dc                MemManage_Handler
+                0x0000000008004c74        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004c74                MemManage_Handler
  .text.BusFault_Handler
-                0x00000000080069e0        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x00000000080069e0                BusFault_Handler
+                0x0000000008004c78        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004c78                BusFault_Handler
  .text.UsageFault_Handler
-                0x00000000080069e4        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x00000000080069e4                UsageFault_Handler
+                0x0000000008004c7c        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004c7c                UsageFault_Handler
  .text.SVC_Handler
-                0x00000000080069e8        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x00000000080069e8                SVC_Handler
+                0x0000000008004c80        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004c80                SVC_Handler
  .text.DebugMon_Handler
-                0x00000000080069ec        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x00000000080069ec                DebugMon_Handler
+                0x0000000008004c84        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004c84                DebugMon_Handler
  .text.PendSV_Handler
-                0x00000000080069f0        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x00000000080069f0                PendSV_Handler
+                0x0000000008004c88        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004c88                PendSV_Handler
  .text.SysTick_Handler
-                0x00000000080069f4       0x78 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x00000000080069f4                SysTick_Handler
+                0x0000000008004c8c       0x78 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004c8c                SysTick_Handler
  .text.EXTI0_IRQHandler
-                0x0000000008006a6c       0x14 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x0000000008006a6c                EXTI0_IRQHandler
+                0x0000000008004d04       0x14 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004d04                EXTI0_IRQHandler
  .text.EXTI1_IRQHandler
-                0x0000000008006a80       0x14 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x0000000008006a80                EXTI1_IRQHandler
+                0x0000000008004d18       0x14 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004d18                EXTI1_IRQHandler
  .text.DMA1_Stream7_IRQHandler
-                0x0000000008006a94        0xc /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x0000000008006a94                DMA1_Stream7_IRQHandler
+                0x0000000008004d2c        0xc /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004d2c                DMA1_Stream7_IRQHandler
  .text.DMA1_Stream3_IRQHandler
-                0x0000000008006aa0        0x8 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x0000000008006aa0                DMA1_Stream3_IRQHandler
+                0x0000000008004d38        0x8 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004d38                DMA1_Stream3_IRQHandler
  .text.TIM4_IRQHandler
-                0x0000000008006aa8        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x0000000008006aa8                TIM4_IRQHandler
- .text.OTG_FS_IRQHandler
-                0x0000000008006aac      0x950 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x0000000008006aac                OTG_FS_IRQHandler
+                0x0000000008004d40        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004d40                TIM4_IRQHandler
  .text.SystemInit
-                0x00000000080073fc       0x50 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
-                0x00000000080073fc                SystemInit
+                0x0000000008004d44       0x50 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004d44                SystemInit
+ .text.USBH_MIDI_InterfaceDeInit
+                0x0000000008004d94       0xa8 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.OTG_FS_IRQHandler
+                0x0000000008004e3c      0x950 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008004e3c                OTG_FS_IRQHandler
+ .text.USBH_CtlSendData.constprop.0.isra.0
+                0x000000000800578c       0x84 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.USBH_CtlReq.part.0
+                0x0000000008005810      0x288 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.USBH_MIDI_Process
+                0x0000000008005a98      0x484 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.USBH_Get_StringDesc.constprop.0
+                0x0000000008005f1c       0x78 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.USBH_Get_DevDesc.constprop.0
+                0x0000000008005f94       0xa0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .text.startup.main
+                0x0000000008006034     0x1410 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+                0x0000000008006034                main
  .text.Reset_Handler
-                0x000000000800744c       0x50 ./Synth/startup_stm32f407xx.o
-                0x000000000800744c                Reset_Handler
+                0x0000000008007444       0x50 ./drivers/startup_stm32f407xx.o
+                0x0000000008007444                Reset_Handler
  .text.Default_Handler
-                0x000000000800749c        0x2 ./Synth/startup_stm32f407xx.o
-                0x000000000800749c                DMA2_Stream6_IRQHandler
-                0x000000000800749c                HASH_RNG_IRQHandler
-                0x000000000800749c                EXTI2_IRQHandler
-                0x000000000800749c                TIM8_CC_IRQHandler
-                0x000000000800749c                TIM1_CC_IRQHandler
-                0x000000000800749c                DMA2_Stream5_IRQHandler
-                0x000000000800749c                DMA1_Stream5_IRQHandler
-                0x000000000800749c                PVD_IRQHandler
-                0x000000000800749c                SDIO_IRQHandler
-                0x000000000800749c                TAMP_STAMP_IRQHandler
-                0x000000000800749c                CAN2_RX1_IRQHandler
-                0x000000000800749c                EXTI3_IRQHandler
-                0x000000000800749c                TIM8_TRG_COM_TIM14_IRQHandler
-                0x000000000800749c                TIM1_UP_TIM10_IRQHandler
-                0x000000000800749c                TIM8_UP_TIM13_IRQHandler
-                0x000000000800749c                I2C3_ER_IRQHandler
-                0x000000000800749c                I2C2_EV_IRQHandler
-                0x000000000800749c                DMA1_Stream2_IRQHandler
-                0x000000000800749c                CAN1_RX0_IRQHandler
-                0x000000000800749c                FPU_IRQHandler
-                0x000000000800749c                OTG_HS_WKUP_IRQHandler
-                0x000000000800749c                CAN2_SCE_IRQHandler
-                0x000000000800749c                DMA2_Stream2_IRQHandler
-                0x000000000800749c                SPI1_IRQHandler
-                0x000000000800749c                TIM6_DAC_IRQHandler
-                0x000000000800749c                TIM1_BRK_TIM9_IRQHandler
-                0x000000000800749c                DCMI_IRQHandler
-                0x000000000800749c                CAN2_RX0_IRQHandler
-                0x000000000800749c                DMA2_Stream3_IRQHandler
-                0x000000000800749c                USART6_IRQHandler
-                0x000000000800749c                USART3_IRQHandler
-                0x000000000800749c                CAN1_RX1_IRQHandler
-                0x000000000800749c                UART5_IRQHandler
-                0x000000000800749c                DMA2_Stream0_IRQHandler
-                0x000000000800749c                I2C1_EV_IRQHandler
-                0x000000000800749c                DMA1_Stream6_IRQHandler
-                0x000000000800749c                DMA1_Stream1_IRQHandler
-                0x000000000800749c                UART4_IRQHandler
-                0x000000000800749c                TIM3_IRQHandler
-                0x000000000800749c                RCC_IRQHandler
-                0x000000000800749c                TIM8_BRK_TIM12_IRQHandler
-                0x000000000800749c                Default_Handler
-                0x000000000800749c                EXTI15_10_IRQHandler
-                0x000000000800749c                ADC_IRQHandler
-                0x000000000800749c                TIM7_IRQHandler
-                0x000000000800749c                CAN2_TX_IRQHandler
-                0x000000000800749c                TIM5_IRQHandler
-                0x000000000800749c                DMA2_Stream7_IRQHandler
-                0x000000000800749c                I2C3_EV_IRQHandler
-                0x000000000800749c                EXTI9_5_IRQHandler
-                0x000000000800749c                RTC_WKUP_IRQHandler
-                0x000000000800749c                ETH_WKUP_IRQHandler
-                0x000000000800749c                SPI2_IRQHandler
-                0x000000000800749c                OTG_HS_EP1_IN_IRQHandler
-                0x000000000800749c                DMA1_Stream0_IRQHandler
-                0x000000000800749c                CAN1_TX_IRQHandler
-                0x000000000800749c                EXTI4_IRQHandler
-                0x000000000800749c                FSMC_IRQHandler
-                0x000000000800749c                ETH_IRQHandler
-                0x000000000800749c                OTG_HS_EP1_OUT_IRQHandler
-                0x000000000800749c                WWDG_IRQHandler
-                0x000000000800749c                TIM2_IRQHandler
-                0x000000000800749c                OTG_FS_WKUP_IRQHandler
-                0x000000000800749c                TIM1_TRG_COM_TIM11_IRQHandler
-                0x000000000800749c                OTG_HS_IRQHandler
-                0x000000000800749c                USART2_IRQHandler
-                0x000000000800749c                I2C2_ER_IRQHandler
-                0x000000000800749c                DMA2_Stream1_IRQHandler
-                0x000000000800749c                CAN1_SCE_IRQHandler
-                0x000000000800749c                FLASH_IRQHandler
-                0x000000000800749c                DMA2_Stream4_IRQHandler
-                0x000000000800749c                USART1_IRQHandler
-                0x000000000800749c                SPI3_IRQHandler
-                0x000000000800749c                DMA1_Stream4_IRQHandler
-                0x000000000800749c                I2C1_ER_IRQHandler
-                0x000000000800749c                RTC_Alarm_IRQHandler
- *fill*         0x000000000800749e        0x2 
- .text.tanf     0x00000000080074a0       0x54 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_tan.o)
-                0x00000000080074a0                tanf
+                0x0000000008007494        0x2 ./drivers/startup_stm32f407xx.o
+                0x0000000008007494                DMA2_Stream6_IRQHandler
+                0x0000000008007494                HASH_RNG_IRQHandler
+                0x0000000008007494                EXTI2_IRQHandler
+                0x0000000008007494                TIM8_CC_IRQHandler
+                0x0000000008007494                TIM1_CC_IRQHandler
+                0x0000000008007494                DMA2_Stream5_IRQHandler
+                0x0000000008007494                DMA1_Stream5_IRQHandler
+                0x0000000008007494                PVD_IRQHandler
+                0x0000000008007494                SDIO_IRQHandler
+                0x0000000008007494                TAMP_STAMP_IRQHandler
+                0x0000000008007494                CAN2_RX1_IRQHandler
+                0x0000000008007494                EXTI3_IRQHandler
+                0x0000000008007494                TIM8_TRG_COM_TIM14_IRQHandler
+                0x0000000008007494                TIM1_UP_TIM10_IRQHandler
+                0x0000000008007494                TIM8_UP_TIM13_IRQHandler
+                0x0000000008007494                I2C3_ER_IRQHandler
+                0x0000000008007494                I2C2_EV_IRQHandler
+                0x0000000008007494                DMA1_Stream2_IRQHandler
+                0x0000000008007494                CAN1_RX0_IRQHandler
+                0x0000000008007494                FPU_IRQHandler
+                0x0000000008007494                OTG_HS_WKUP_IRQHandler
+                0x0000000008007494                CAN2_SCE_IRQHandler
+                0x0000000008007494                DMA2_Stream2_IRQHandler
+                0x0000000008007494                SPI1_IRQHandler
+                0x0000000008007494                TIM6_DAC_IRQHandler
+                0x0000000008007494                TIM1_BRK_TIM9_IRQHandler
+                0x0000000008007494                DCMI_IRQHandler
+                0x0000000008007494                CAN2_RX0_IRQHandler
+                0x0000000008007494                DMA2_Stream3_IRQHandler
+                0x0000000008007494                USART6_IRQHandler
+                0x0000000008007494                USART3_IRQHandler
+                0x0000000008007494                CAN1_RX1_IRQHandler
+                0x0000000008007494                UART5_IRQHandler
+                0x0000000008007494                DMA2_Stream0_IRQHandler
+                0x0000000008007494                I2C1_EV_IRQHandler
+                0x0000000008007494                DMA1_Stream6_IRQHandler
+                0x0000000008007494                DMA1_Stream1_IRQHandler
+                0x0000000008007494                UART4_IRQHandler
+                0x0000000008007494                TIM3_IRQHandler
+                0x0000000008007494                RCC_IRQHandler
+                0x0000000008007494                TIM8_BRK_TIM12_IRQHandler
+                0x0000000008007494                Default_Handler
+                0x0000000008007494                EXTI15_10_IRQHandler
+                0x0000000008007494                ADC_IRQHandler
+                0x0000000008007494                TIM7_IRQHandler
+                0x0000000008007494                CAN2_TX_IRQHandler
+                0x0000000008007494                TIM5_IRQHandler
+                0x0000000008007494                DMA2_Stream7_IRQHandler
+                0x0000000008007494                I2C3_EV_IRQHandler
+                0x0000000008007494                EXTI9_5_IRQHandler
+                0x0000000008007494                RTC_WKUP_IRQHandler
+                0x0000000008007494                ETH_WKUP_IRQHandler
+                0x0000000008007494                SPI2_IRQHandler
+                0x0000000008007494                OTG_HS_EP1_IN_IRQHandler
+                0x0000000008007494                DMA1_Stream0_IRQHandler
+                0x0000000008007494                CAN1_TX_IRQHandler
+                0x0000000008007494                EXTI4_IRQHandler
+                0x0000000008007494                FSMC_IRQHandler
+                0x0000000008007494                ETH_IRQHandler
+                0x0000000008007494                OTG_HS_EP1_OUT_IRQHandler
+                0x0000000008007494                WWDG_IRQHandler
+                0x0000000008007494                TIM2_IRQHandler
+                0x0000000008007494                OTG_FS_WKUP_IRQHandler
+                0x0000000008007494                TIM1_TRG_COM_TIM11_IRQHandler
+                0x0000000008007494                OTG_HS_IRQHandler
+                0x0000000008007494                USART2_IRQHandler
+                0x0000000008007494                I2C2_ER_IRQHandler
+                0x0000000008007494                DMA2_Stream1_IRQHandler
+                0x0000000008007494                CAN1_SCE_IRQHandler
+                0x0000000008007494                FLASH_IRQHandler
+                0x0000000008007494                DMA2_Stream4_IRQHandler
+                0x0000000008007494                USART1_IRQHandler
+                0x0000000008007494                SPI3_IRQHandler
+                0x0000000008007494                DMA1_Stream4_IRQHandler
+                0x0000000008007494                I2C1_ER_IRQHandler
+                0x0000000008007494                RTC_Alarm_IRQHandler
+ *fill*         0x0000000008007496        0x2 
+ .text.tanf     0x0000000008007498       0x54 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_tan.o)
+                0x0000000008007498                tanf
  .text.__kernel_tanf
-                0x00000000080074f4      0x1c0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-kf_tan.o)
-                0x00000000080074f4                __kernel_tanf
+                0x00000000080074ec      0x1c0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-kf_tan.o)
+                0x00000000080074ec                __kernel_tanf
  .text.__ieee754_rem_pio2f
-                0x00000000080076b4      0x260 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_rem_pio2.o)
-                0x00000000080076b4                __ieee754_rem_pio2f
- .text.fabsf    0x0000000008007914       0x10 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fabs.o)
-                0x0000000008007914                fabsf
+                0x00000000080076ac      0x260 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_rem_pio2.o)
+                0x00000000080076ac                __ieee754_rem_pio2f
+ .text.fabsf    0x000000000800790c       0x10 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fabs.o)
+                0x000000000800790c                fabsf
  .text.__kernel_rem_pio2f
-                0x0000000008007924      0x658 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-kf_rem_pio2.o)
-                0x0000000008007924                __kernel_rem_pio2f
- .text.floorf   0x0000000008007f7c       0x90 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_floor.o)
-                0x0000000008007f7c                floorf
- .text.scalbnf  0x000000000800800c       0xe8 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_scalbn.o)
-                0x000000000800800c                scalbnf
- .text.memset   0x00000000080080f4       0xa4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-memset.o)
-                0x00000000080080f4                memset
+                0x000000000800791c      0x658 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-kf_rem_pio2.o)
+                0x000000000800791c                __kernel_rem_pio2f
+ .text.floorf   0x0000000008007f74       0x90 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_floor.o)
+                0x0000000008007f74                floorf
+ .text.scalbnf  0x0000000008008004       0xe8 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_scalbn.o)
+                0x0000000008008004                scalbnf
+ .text.memset   0x00000000080080ec       0xa4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-memset.o)
+                0x00000000080080ec                memset
  .text.__libc_init_array
-                0x0000000008008198       0x48 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
-                0x0000000008008198                __libc_init_array
+                0x0000000008008190       0x48 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
+                0x0000000008008190                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x00000000080081e0        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-lock.o)
-                0x00000000080081e0                __retarget_lock_acquire_recursive
+                0x00000000080081d8        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-lock.o)
+                0x00000000080081d8                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x00000000080081e4        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-lock.o)
-                0x00000000080081e4                __retarget_lock_release_recursive
+                0x00000000080081dc        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-lock.o)
+                0x00000000080081dc                __retarget_lock_release_recursive
  .text.startup.register_fini
-                0x00000000080081e8       0x14 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- .text.atexit   0x00000000080081fc        0xc /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
-                0x00000000080081fc                atexit
+                0x00000000080081e0       0x14 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ .text.atexit   0x00000000080081f4        0xc /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+                0x00000000080081f4                atexit
  .text._malloc_r
-                0x0000000008008208      0x560 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-mallocr.o)
-                0x0000000008008208                _malloc_r
+                0x0000000008008200      0x560 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-mallocr.o)
+                0x0000000008008200                _malloc_r
  .text.__malloc_lock
-                0x0000000008008768        0xc /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-mlock.o)
-                0x0000000008008768                __malloc_lock
+                0x0000000008008760        0xc /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-mlock.o)
+                0x0000000008008760                __malloc_lock
  .text.__malloc_unlock
-                0x0000000008008774        0xc /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-mlock.o)
-                0x0000000008008774                __malloc_unlock
- .text._sbrk_r  0x0000000008008780       0x24 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-sbrkr.o)
-                0x0000000008008780                _sbrk_r
+                0x000000000800876c        0xc /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-mlock.o)
+                0x000000000800876c                __malloc_unlock
+ .text._sbrk_r  0x0000000008008778       0x24 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-sbrkr.o)
+                0x0000000008008778                _sbrk_r
  .text.__libc_fini_array
-                0x00000000080087a4       0x28 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
-                0x00000000080087a4                __libc_fini_array
+                0x000000000800879c       0x28 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+                0x000000000800879c                __libc_fini_array
  .text.__register_exitproc
-                0x00000000080087cc       0x88 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
-                0x00000000080087cc                __register_exitproc
+                0x00000000080087c4       0x88 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+                0x00000000080087c4                __register_exitproc
  .text._malloc_trim_r
-                0x0000000008008854       0xa0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-freer.o)
-                0x0000000008008854                _malloc_trim_r
- .text._free_r  0x00000000080088f4      0x20c /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-freer.o)
-                0x00000000080088f4                _free_r
- .text.calloc   0x0000000008008b00       0x18 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-calloc.o)
-                0x0000000008008b00                calloc
+                0x000000000800884c       0xa0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-freer.o)
+                0x000000000800884c                _malloc_trim_r
+ .text._free_r  0x00000000080088ec      0x20c /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-freer.o)
+                0x00000000080088ec                _free_r
+ .text.calloc   0x0000000008008af8       0x18 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-calloc.o)
+                0x0000000008008af8                calloc
  .text._calloc_r
-                0x0000000008008b18       0x78 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-callocr.o)
-                0x0000000008008b18                _calloc_r
- .text.malloc   0x0000000008008b90       0x10 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-malloc.o)
-                0x0000000008008b90                malloc
- .text.free     0x0000000008008ba0       0x10 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-malloc.o)
-                0x0000000008008ba0                free
- .text.__errno  0x0000000008008bb0        0xc /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-errno.o)
-                0x0000000008008bb0                __errno
- .text._sbrk    0x0000000008008bbc       0x1c /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(sbrk.o)
-                0x0000000008008bbc                _sbrk
+                0x0000000008008b10       0x78 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-callocr.o)
+                0x0000000008008b10                _calloc_r
+ .text.malloc   0x0000000008008b88       0x10 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-malloc.o)
+                0x0000000008008b88                malloc
+ .text.free     0x0000000008008b98       0x10 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-malloc.o)
+                0x0000000008008b98                free
+ .text.__errno  0x0000000008008ba8        0xc /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-errno.o)
+                0x0000000008008ba8                __errno
+ .text._sbrk    0x0000000008008bb4       0x1c /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(sbrk.o)
+                0x0000000008008bb4                _sbrk
  *(.glue_7)
- .glue_7        0x0000000008008bd8        0x0 linker stubs
+ .glue_7        0x0000000008008bd0        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008008bd8        0x0 linker stubs
+ .glue_7t       0x0000000008008bd0        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008008bd8        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x0000000008008bd0        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x0000000008008bd8        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0000000008008bd8                _init
- .init          0x0000000008008bdc        0x8 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x0000000008008bd0        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000008008bd0                _init
+ .init          0x0000000008008bd4        0x8 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0000000008008be4        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0000000008008be4                _fini
- .fini          0x0000000008008be8        0x8 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x0000000008008bf0                . = ALIGN (0x4)
-                0x0000000008008bf0                _etext = .
+ .fini          0x0000000008008bdc        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000008008bdc                _fini
+ .fini          0x0000000008008be0        0x8 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0000000008008be8                . = ALIGN (0x4)
+                0x0000000008008be8                _etext = .
 
-.vfp11_veneer   0x0000000008008bf0        0x0
- .vfp11_veneer  0x0000000008008bf0        0x0 linker stubs
+.vfp11_veneer   0x0000000008008be8        0x0
+ .vfp11_veneer  0x0000000008008be8        0x0 linker stubs
 
-.v4_bx          0x0000000008008bf0        0x0
- .v4_bx         0x0000000008008bf0        0x0 linker stubs
+.v4_bx          0x0000000008008be8        0x0
+ .v4_bx         0x0000000008008be8        0x0 linker stubs
 
-.iplt           0x0000000008008bf0        0x0
- .iplt          0x0000000008008bf0        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x0000000008008be8        0x0
+ .iplt          0x0000000008008be8        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x0000000008008bf0      0x400
-                0x0000000008008bf0                . = ALIGN (0x4)
+.rodata         0x0000000008008be8      0x400
+                0x0000000008008be8                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.str1.4
-                0x0000000008008bf0        0x5 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- *fill*         0x0000000008008bf5        0x3 
+                0x0000000008008be8        0x5 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ *fill*         0x0000000008008bed        0x3 
  .rodata.APBAHBPrescTable
-                0x0000000008008bf8       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008008bf0       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .rodata.GPIO_PIN
-                0x0000000008008c08        0x8 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008008c00        0x8 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .rodata.GPIO_PORT
-                0x0000000008008c10       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000008008c08       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .rodata.npio2_hw
-                0x0000000008008c20       0x80 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_rem_pio2.o)
+                0x0000000008008c18       0x80 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_rem_pio2.o)
  .rodata.two_over_pi
-                0x0000000008008ca0      0x318 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_rem_pio2.o)
- .rodata.PIo2   0x0000000008008fb8       0x2c /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-kf_rem_pio2.o)
+                0x0000000008008c98      0x318 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_rem_pio2.o)
+ .rodata.PIo2   0x0000000008008fb0       0x2c /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-kf_rem_pio2.o)
  .rodata.init_jk
-                0x0000000008008fe4        0xc /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-kf_rem_pio2.o)
-                0x0000000008008ff0                . = ALIGN (0x4)
+                0x0000000008008fdc        0xc /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-kf_rem_pio2.o)
+                0x0000000008008fe8                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008008ff0        0x0
- .rel.iplt      0x0000000008008ff0        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x0000000008008fe8        0x0
+ .rel.iplt      0x0000000008008fe8        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008008ff0        0x0
-                0x0000000008008ff0                __exidx_start = .
+.ARM            0x0000000008008fe8        0x0
+                0x0000000008008fe8                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008008ff0                __exidx_end = .
+                0x0000000008008fe8                __exidx_end = .
 
-.preinit_array  0x0000000008008ff0        0x0
-                0x0000000008008ff0                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008008fe8        0x0
+                0x0000000008008fe8                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008008ff0                PROVIDE (__preinit_array_end = .)
+                0x0000000008008fe8                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000008008ff0        0x8
-                0x0000000008008ff0                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008008fe8        0x8
+                0x0000000008008fe8                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x0000000008008ff0        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+                0x0000000008008fe8        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0000000008008ff4        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0000000008008ff8                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008008fec        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0000000008008ff0                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008008ff8        0x4
-                0x0000000008008ff8                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008008ff0        0x4
+                0x0000000008008ff0                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008008ff8        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0000000008008ffc                PROVIDE (__fini_array_end = .)
-                0x0000000008008ffc                _sidata = LOADADDR (.data)
+ .fini_array    0x0000000008008ff0        0x4 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0000000008008ff4                PROVIDE (__fini_array_end = .)
+                0x0000000008008ff4                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x590 load address 0x0000000008008ffc
+.data           0x0000000020000000      0x590 load address 0x0000000008008ff4
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
  *(.data*)
- .data.Count    0x0000000020000000        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+ .data.Count    0x0000000020000000        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .data.Is_cs43l22_Stop
-                0x0000000020000001        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000020000001        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  *fill*         0x0000000020000002        0x2 
  .data.MIDI_Class
-                0x0000000020000004       0x20 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000020000004       0x20 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .data.cs43l22_drv
-                0x0000000020000024       0x2c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .data.output   0x0000000020000050        0x8 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000020000024       0x2c /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .data.output   0x0000000020000050        0x8 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .data._impure_data
                 0x0000000020000058      0x120 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-impure.o)
                 0x0000000020000058                _impure_data
@@ -1056,19 +1055,19 @@ LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-no
                 0x000000002000058c                __malloc_trim_threshold
                 0x0000000020000590                . = ALIGN (0x4)
                 0x0000000020000590                _edata = .
-                0x000000000800958c                _siccmram = LOADADDR (.ccmram)
+                0x0000000008009584                _siccmram = LOADADDR (.ccmram)
 
 .tm_clone_table
-                0x0000000020000590        0x0 load address 0x000000000800958c
+                0x0000000020000590        0x0 load address 0x0000000008009584
  .tm_clone_table
                 0x0000000020000590        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
                 0x0000000020000590        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtend.o
 
-.igot.plt       0x0000000020000590        0x0 load address 0x000000000800958c
+.igot.plt       0x0000000020000590        0x0 load address 0x0000000008009584
  .igot.plt      0x0000000020000590        0x0 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x0000000010000000        0x0 load address 0x000000000800958c
+.ccmram         0x0000000010000000        0x0 load address 0x0000000008009584
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _sccmram = .
  *(.ccmram)
@@ -1087,44 +1086,44 @@ LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  *fill*         0x0000000020000591        0x3 
  .bss.object.0  0x0000000020000594       0x18 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .bss.Appli_state
-                0x00000000200005ac        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000200005ac        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.DebouncedKeyPress
-                0x00000000200005ad        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000200005ad        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  *fill*         0x00000000200005ae        0x2 
  .bss.I2cHandle
-                0x00000000200005b0       0x38 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000200005b0       0x38 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.LED_counter
-                0x00000000200005e8       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000200005e8       0x10 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.MIDI_RX_Buffer
-                0x00000000200005f8       0x40 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000200005f8       0x40 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.OutputDev
-                0x0000000020000638        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000020000638        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  *fill*         0x0000000020000639        0x3 
  .bss.TimingDelay
-                0x000000002000063c        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x000000002000063c        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.TimingDelay1
-                0x0000000020000640        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000020000640        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.audiobuff
-                0x0000000020000644      0xfa0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000020000644      0xfa0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.currentNote
-                0x00000000200015e4        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000200015e4        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  *fill*         0x00000000200015e5        0x3 
- .bss.dsp       0x00000000200015e8        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+ .bss.dsp       0x00000000200015e8        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.hAudioOutI2s
-                0x00000000200015ec       0x40 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .bss.hHCD      0x000000002000162c      0x290 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .bss.hUSBHost  0x00000000200018bc      0x618 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x00000000200015ec       0x40 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .bss.hHCD      0x000000002000162c      0x290 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .bss.hUSBHost  0x00000000200018bc      0x618 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.hdma_i2sTx.1
-                0x0000000020001ed4       0x50 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000020001ed4       0x50 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.notesCount
-                0x0000000020001f24        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000020001f24        0x1 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  *fill*         0x0000000020001f25        0x3 
- .bss.notes_On  0x0000000020001f28       0x80 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .bss.output0   0x0000000020001fa8      0x7d0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .bss.output1   0x0000000020002778      0x7d0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+ .bss.notes_On  0x0000000020001f28       0x80 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .bss.output0   0x0000000020001fa8      0x7d0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .bss.output1   0x0000000020002778      0x7d0 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.pAudioDrv
-                0x0000000020002f48        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
- .bss.uwTick    0x0000000020002f4c        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000020002f48        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
+ .bss.uwTick    0x0000000020002f4c        0x4 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .bss.__sf      0x0000000020002f50      0x138 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-findfp.o)
                 0x0000000020002f50                __sf
  .bss.__lock___atexit_recursive_mutex
@@ -1185,9 +1184,9 @@ LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .ARM.attributes
                 0x000000000000001e       0x34 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .ARM.attributes
-                0x0000000000000052       0x32 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+                0x0000000000000052       0x32 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .ARM.attributes
-                0x0000000000000084       0x21 ./Synth/startup_stm32f407xx.o
+                0x0000000000000084       0x21 ./drivers/startup_stm32f407xx.o
  .ARM.attributes
                 0x00000000000000a5       0x34 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_tan.o)
  .ARM.attributes
@@ -1253,7 +1252,7 @@ LOAD /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-no
 .comment        0x0000000000000000       0x33
  .comment       0x0000000000000000       0x33 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                                          0x34 (size before relaxing)
- .comment       0x0000000000000033       0x34 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccHh8b21.ltrans0.ltrans.o
+ .comment       0x0000000000000033       0x34 /var/folders/cb/67yqdqqd4ns0dsd34p7h54vr0000gn/T//ccy0kJMn.ltrans0.ltrans.o
  .comment       0x0000000000000033       0x34 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_tan.o)
  .comment       0x0000000000000033       0x34 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-kf_tan.o)
  .comment       0x0000000000000033       0x34 /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_rem_pio2.o)
