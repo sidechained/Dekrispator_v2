@@ -134,15 +134,13 @@ Note: for the last line to work, the st-link utility will have to be installed o
 # Further Aims
 
 - Further simplify the makefile (change %.o %.d approach)
-- Move startup_stm32f407xx.S, stm32f4xx_hal_conf.h, stm32f4xx_it.c, stm32f4xx_it.h, system_stm32f4xx.c, usbh_conf.c and usbh_conf.h to drivers
-- Add an 'include' to the makefile for `CInterface.h` (instead of copying to repo dir!)
-- (`CInterface.h` eliminates need to comment out 'meta' and 'ui' sections of mydsp.c code. More info [here](https://sourceforge.net/p/faudiostream/mailman/message/30907474/))
 - Audio output seems a bit 'crispy' - solve strange clicks and pops within first few seconds of board power-up!
 - Make into an official architecture file i.e. faust2stm32f4
 - Add support for inbuilt microphone and accelerometers (see notes below)
 
 # Notes
 
+- (`CInterface.h` eliminates need to comment out 'meta' and 'ui' sections of mydsp.c code. More info [here](https://sourceforge.net/p/faudiostream/mailman/message/30907474/))
 - General note: I did not have to #include "soundGen.h" from "MIDI_application.c"
 
 # Notes on Using the Inbuilt MEMs Microphone and Accelerometers
