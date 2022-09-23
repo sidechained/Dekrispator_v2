@@ -136,6 +136,7 @@ Note: for the last line to work, the st-link utility will have to be installed o
 - Further simplify the makefile (change %.o %.d approach)
 - Audio output seems a bit 'crispy' - solve strange clicks and pops within first few seconds of board power-up!
 - Make into an official architecture file i.e. faust2stm32f4
+https://faustdoc.grame.fr/manual/architectures/
 - Add support for inbuilt microphone and accelerometers (see notes below)
 
 # Notes
@@ -185,3 +186,41 @@ STM32F4-Discovery_FW_V1.1.0/Project/Peripheral_Examples/MEMS  (StdPeripheral Lib
 If the board is moved the acceleration is detected on x/Y axis and LEDs toggles according to the motion direction and speed
 
 ./STM32F4-Discovery_FW_V1.1.0/Utilities/STM32F4-Discovery/stm32f4_discovery_lis302dl.c
+
+# Writing a Faust Architecture File
+
+faust -a myArchitecture.c myDsp.dsp
+
+
+- it can be .c as well as .cpp. Yes...see "Other Languages Than C++" section
+the C backend needs additional CGlue.h and CInterface.h files, with the minimal-c file as a simple console mode example using them
+
+- can it be more than one file? How? Yes
+
+Generally, several files to connect to the audio layer, controller layer, and possibly other (MIDI, OSC...) have to be used. One of them is the main file and include the others. The -i option can be added to actually inline all #include "faust/xxx/yyy" headers (all files starting with faust) to produce a single self-contained unique file. Then a faust2xxx script has to be written to chain the Faust compilation step and the C++ compilation one (and possibly others). Look at the Developing a faust2xx Script section.
+
+See "Embedded Platforms" section
+-uim compiler option
+faust -uim foo.dsp
+
+## Types of Architecture
+
+What kind of architecture? I need to look at an example. Perhaps minimal.c
+
+./share/faust/minimal.c
+
+Audio architecture - connect to a underlying audio layer
+MIDI architecture - A MIDI architecture module typically connects a Faust program to the MIDI drivers.
+UI architecture - links user actions (i.e., via graphic widgets, command line parameters, OSC messages, etc.) with the Faust program to control. 
+DSP Architecture Modules - ?
+
+Replace MIDI_Application with MIDI_Interface that just controls the existing MIDI spec coded in Faust
+
+## Developing a New Architecture File
+
+
+## Using faust2xx Scripts
+
+The faust2xx scripts finally combine different architecture files to generate a ready-to-use application or plugin, etc... from a Faust DSP program. They typically combine the generated DSP with an UI architecture file and an audio architecture file. Most of the also have addition options like -midi, -nvoices <num>, -effect <auto|effect.dsp> or -soundfile to generate polyphonic instruments with or without effects, or audio file support. Look at the following page for a more complete description.
+
+https://github.com/grame-cncm/faust/blob/master-dev/tools/faust2appls/faust2minimal
