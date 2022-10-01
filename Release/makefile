@@ -318,25 +318,25 @@ ifneq ($(strip $(C_DEPS)),)
 -include $(C_DEPS)
 endif
 
-all: Dekrispator_v2.elf Dekrispator_v2.bin Dekrispator_v2.lst Dekrispator_v2.siz
+all: Faust2STMSynth.elf Faust2STMSynth.bin Faust2STMSynth.lst Faust2STMSynth.siz
 
-Dekrispator_v2.elf: $(OBJS)
-	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -T "../drivers/STM32F407VG_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"Dekrispator_v2.map" --specs=nosys.specs -o "Dekrispator_v2.elf" $(OBJS) -lm -lc -lg
+Faust2STMSynth.elf: $(OBJS)
+	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -T "../drivers/STM32F407VG_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"Faust2STMSynth.map" --specs=nosys.specs -o "Faust2STMSynth.elf" $(OBJS) -lm -lc -lg
 
-Dekrispator_v2.bin: Dekrispator_v2.elf
-	$(ARM_PATH)arm-none-eabi-objcopy -O binary "Dekrispator_v2.elf"  "Dekrispator_v2.bin"
+Faust2STMSynth.bin: Faust2STMSynth.elf
+	$(ARM_PATH)arm-none-eabi-objcopy -O binary "Faust2STMSynth.elf"  "Faust2STMSynth.bin"
 
-Dekrispator_v2.lst: Dekrispator_v2.elf
-	$(ARM_PATH)arm-none-eabi-objdump --source --all-headers --demangle --line-numbers --wide "Dekrispator_v2.elf" > "Dekrispator_v2.lst"
+Faust2STMSynth.lst: Faust2STMSynth.elf
+	$(ARM_PATH)arm-none-eabi-objdump --source --all-headers --demangle --line-numbers --wide "Faust2STMSynth.elf" > "Faust2STMSynth.lst"
 
-Dekrispator_v2.siz: Dekrispator_v2.elf
-	$(ARM_PATH)arm-none-eabi-size --format=berkeley --totals "Dekrispator_v2.elf"
+Faust2STMSynth.siz: Faust2STMSynth.elf
+	$(ARM_PATH)arm-none-eabi-size --format=berkeley --totals "Faust2STMSynth.elf"
 
 # Other Targets
 clean:
-	-rm -rf $(OBJS) Dekrispator_v2.bin Dekrispator_v2.lst Dekrispator_v2.siz $(S_UPPER_DEPS)$(C_DEPS) Dekrispator_v2.elf
+	-rm -rf $(OBJS) Faust2STMSynth.bin Faust2STMSynth.lst Faust2STMSynth.siz $(S_UPPER_DEPS)$(C_DEPS) Faust2STMSynth.elf
 	
 flash:
-	st-flash write Dekrispator_v2.bin 0x8000000
+	st-flash write Faust2STMSynth.bin 0x8000000
 
 .PHONY: all clean dependents
