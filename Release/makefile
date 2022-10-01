@@ -336,4 +336,7 @@ Dekrispator_v2.siz: Dekrispator_v2.elf
 clean:
 	-rm -rf $(OBJS) Dekrispator_v2.bin Dekrispator_v2.lst Dekrispator_v2.siz $(S_UPPER_DEPS)$(C_DEPS) Dekrispator_v2.elf
 	
+flash:
+	st-flash write Dekrispator_v2.bin 0x8000000
+
 .PHONY: all clean dependents
