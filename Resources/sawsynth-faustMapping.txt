@@ -1,0 +1,33 @@
+// transport
+fHslider8, "midi", "ctrl 58 set_Env1toAmp", &dsp->fHslider8, 0.0f, 0.0f, 1.0f, 1.0f
+fHslider14, "midi", "ctrl 59 set_Env1toPitch", &dsp->fHslider14, 0.0f, 0.0f, 1.0f, 1.0f
+fHslider5, "midi", "ctrl 46 set_Env1toFilter", &dsp->fHslider5, 0.0f, 0.0f, 1.0f, 1.0f
+
+fHslider10, "midi", "ctrl 60 set_Env2toAmp", &dsp->fHslider10, 0.0f, 0.0f, 1.0f, 1.0f
+fHslider12, "midi", "ctrl 61 set_Env2toPitch", &dsp->fHslider12, 0.0f, 0.0f, 1.0f, 1.0f
+fHslider2, "midi", "ctrl 62 set_Env2toFilter", &dsp->fHslider2, 0.0f, 0.0f, 1.0f, 1.0f
+
+fHslider4, "midi", "ctrl 43 set_Auto_Env_1_On", &dsp->fHslider4, 0.0f, 0.0f, 1.0f, 1.0f
+fHslider1, "midi", "ctrl 44 set_Auto_Env_2_On", &dsp->fHslider1, 0.0f, 0.0f, 1.0f, 1.0f
+fHslider21, "midi", "ctrl 41 set_Echo_Gate", &dsp->fHslider21, 0.0f, 0.0f, 1.0f, 1.0f
+fHslider19, "midi", "ctrl 45 set_Mute_Output", &dsp->fHslider19, 0.0f, 0.0f, 1.0f, 1.0f
+
+// knobs 1-8
+fHslider16, "midi", "ctrl 16 set_Oscillator_Frequency", &dsp->fHslider16, 49.0f, 0.0f, 88.0f, 0.01f
+fHslider18, "midi", "ctrl 17 set_Detune_1", &dsp->fHslider18, -0.1f, -1e+01f, 1e+01f, 0.01f
+fHslider17, "midi", "ctrl 18 set_Detune_2", &dsp->fHslider17, 0.1f, -1e+01f, 1e+01f, 0.01f
+fHslider7, "midi", "ctrl 19 set_Filter_Frequency", &dsp->fHslider7, 3e+03f, 0.0f, 1.5e+04f, 1e+01f
+fHslider0, "midi", "ctrl 20 set_Filter_Resonance", &dsp->fHslider0, 0.0f, 0.0f, 1.0f, 0.001f
+fHslider22, "midi", "ctrl 21 set_Echo_Duration", &dsp->fHslider22, 0.14f, 0.0f, 0.5f, 0.001f
+fHslider23, "midi", "ctrl 22 set_Echo_Feedback", &dsp->fHslider23, 0.9f, 0.0f, 1.0f, 0.001f
+fHslider20, "midi", "ctrl 23 set_Master_Volume", &dsp->fHslider20, -6.0f, -1.2e+02f, 1e+01f, 0.1f
+
+// faders 1-8
+fVslider1, "midi", "ctrl 0 set_env1", &dsp->fVslider1, 0.0f, 0.0f, 1.0f, 0.001f
+fVslider0, "midi", "ctrl 1 set_env2", &dsp->fVslider0, 0.0f, 0.0f, 1.0f, 0.01f
+fHslider9, "midi", "ctrl 2 set_Amplitude_Env1_Depth", &dsp->fHslider9, 1.0f, 0.0f, 1.0f, 0.001f
+fHslider15, "midi", "ctrl 3 set_Pitch_Env1_Depth", &dsp->fHslider15, 5e+03f, 0.0f, 5e+03f, 1.0f
+fHslider6, "midi", "ctrl 4 set_Filter_Env1_Depth", &dsp->fHslider6, 5e+03f, 0.0f, 1e+04f, 0.001f
+fHslider11, "midi", "ctrl 5 set_Amplitude_Env2_Depth", &dsp->fHslider11, 1.0f, 0.0f, 1.0f, 0.001f
+fHslider13, "midi", "ctrl 6 set_Pitch_Env2_Depth", &dsp->fHslider13, 5e+03f, 0.0f, 5e+03f, 1.0f
+fHslider3, "midi", "ctrl 7 set_Filter_Env2_Depth", &dsp->fHslider3, 5e+03f, 0.0f, 1e+04f, 0.001f
