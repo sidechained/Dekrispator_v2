@@ -38,14 +38,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1837"
+     inkscape:window-width="1280"
      inkscape:window-height="947"
      id="namedview910"
      showgrid="false"
      inkscape:document-units="mm"
-     inkscape:zoom="0.812626"
-     inkscape:cx="1234.5281"
-     inkscape:cy="380.76753"
+     inkscape:zoom="0.406313"
+     inkscape:cx="1395.4576"
+     inkscape:cy="451.22791"
      inkscape:window-x="0"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
@@ -104,12 +104,12 @@
        vector-effect="non-scaling-stroke" />
   </g>
   <rect
-     style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.100013;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.179118;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect916"
-     width="5"
-     height="10"
-     x="366.96548"
-     y="32" />
+     width="10.820882"
+     height="14.820883"
+     x="361.17325"
+     y="24.00466" />
   <circle
      style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.100013;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path918"
@@ -145,4 +145,18 @@
      height="11"
      x="360.04514"
      y="139" />
+  <rect
+     style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.173056;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect916-25"
+     width="10.826943"
+     height="13.826944"
+     x="343.15015"
+     y="31.031872" />
+  <rect
+     style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.119942;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect916-2-7-9"
+     width="10.880057"
+     height="13.880057"
+     x="355.16507"
+     y="98.124115" />
 </svg>

@@ -198,54 +198,54 @@ void ProcessReceivedMidiDatas(void)
 
 			// FADERS 1-8
 			case 0:
-				set_filter_cutoffFreqL(val);
+				set_env1(val);
 				break;
 			case 1:
-				set_filter_cutoffFreqR(val);
+				set_env2(val);
 				break;
 			case 2:
-				set_filter_q(val);
+				set_Amplitude_Env1_Depth(val);
 				break;
 			case 3:
-				set_filter_gain(val);
+				set_Pitch_Env1_Depth(val);
 				break;
 			case 4:
-				// unmapped
+				set_Filter_Env1_Depth(val);
 				break;
 			case 5:
-				// unmapped
+				set_Amplitude_Env2_Depth(val);
 				break;
 			case 6:
-				// unmapped
+				set_Pitch_Env2_Depth(val);
 				break;
 			case 7:
-				// unmapped
+				set_Filter_Env2_Depth(val);
 				break;
 
 			// KNOBS 1-8
 			case 16:
-				// unmapped
+				set_Oscillator_Frequency(val);			
 				break;
 			case 17:
-				// unmapped
+				set_Detune_1(val);
 				break;
 			case 18:
-				// unmapped
+				set_Detune_2(val);
 				break;
 			case 19:
-				// unmapped
+				set_Filter_Frequency(val);
 				break;
 			case 20:
-				// unmapped
+				set_Filter_Resonance(val);
 				break;
 			case 21:
-				// unmapped
+				//set_Echo_Duration(val);
 				break;
 			case 22:
-				// unmapped
+				//set_Echo_Feedback(val);
 				break;
 			case 23:
-				// unmapped
+				set_Master_Volume(val);			
 				break;
 
 			// SOLO BUTTONS 1-8
@@ -328,38 +328,39 @@ void ProcessReceivedMidiDatas(void)
 
 			// LOWER TRANSPORT SECTION
 			case 43: // Rewind Button
-				// unmapped
+				set_Auto_Env_1_On(val);
 				break;
 			case 44: // Fast Forward Button
-				// unmapped
+				set_Auto_Env_2_On(val);
 				break;
 			case 42: // Stop
 				// unmapped
 				break;
 			case 41: // Play
-				// unmapped
+				// set_Echo_Gate(val);
 				break;
 			case 45: // Record
+				set_Mute_Output(val);
 				break;
 			
 			// UPPER TRANSPORT SECTION
 			case 46: // Cycle 
-				// Delay_toggle(val);
+				set_Env1toAmp(val);
 				break;
 			case 58: // Track Decrement (<)
-				// unmapped
+				set_Env1toPitch(val);
 				break;
 			case 59: // Track Increment (>)
-				// unmapped
+				set_Env1toFilter(val);
 				break;
 			case 60: // Marker Set
-				// unmapped
+				set_Env2toAmp(val);
 				break;
 			case 61: // Marker Increment (<)
-				// unmapped
+				set_Env2toPitch(val);
 				break;
 			case 62: // Marker Decrement (>)
-				// unmapped
+				set_Env2toFilter(val);
 				break;
 			}
 		}
