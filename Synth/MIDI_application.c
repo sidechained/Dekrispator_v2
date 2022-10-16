@@ -239,10 +239,10 @@ void ProcessReceivedMidiDatas(void)
 				set_Filter_Resonance(val);
 				break;
 			case 21:
-				//set_Echo_Duration(val);
+				set_Autoenv_Attack_Time(val);
 				break;
 			case 22:
-				//set_Echo_Feedback(val);
+				set_Autoenv_Release_Time(val);
 				break;
 			case 23:
 				set_Master_Volume(val);			
