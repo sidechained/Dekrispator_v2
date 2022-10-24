@@ -29,29 +29,29 @@ The full range of controls are described as follows:
 Knobs 1-8:
 1. _OSC FREQ_:		master pitch reference for all three saw waves
 					ranges from 138.59Hz (MIDI Note 49) to 1318.51Hz (MIDI Note 88)
-2. DETUNE 1:			slightly detune the second of the three saw oscillators
-3. DETUNE 2:			slightly detune the third of the three saw oscillators
-4. FILT FREQ:		set cutoff frequency of the moog-style low-pass filter
-5. FILT RES:			set resonance of the moog-style low-pass filter ('sings' at high values)
-6. AENV ATK:			set the attack time of the automatic envelope
-7. AENV RLS:			set the release time of the automatic envelope
+2. _DETUNE 1_:			slightly detune the second of the three saw oscillators
+3. _DETUNE 2_:			slightly detune the third of the three saw oscillators
+4. _FILT FREQ_:		set cutoff frequency of the moog-style low-pass filter
+5. _FILT RES_:			set resonance of the moog-style low-pass filter ('sings' at high values)
+6. _AENV ATK_:			set the attack time of the automatic envelope
+7. _AENV RLS_:			set the release time of the automatic envelope
 					NOTE: ENV2 operates at twice the speed of ENV1!
-8. MAIN VOL			does what it says on the tin (can distort when too loud!)
+8. _MAIN VOL_:			does what it says on the tin (can distort when too loud!)
 
 Faders:
-1. E1 LEVEL 		sets the current level of the envelope (only works when AE1ON is set to off)
-3. E1 AMP DEPTH		sets the amount of amplitude modulation, when the envelope is at it's highest
-4. E1 OSC DEPTH		sets the amount of pitch modulation, when the envelope is at it's highest
-5. E1 FILT DEPTH	sets the amount of filter frequency modulation, when the envelope is at it's highest
+1. _E1 LEVEL_:		sets the current level of the envelope (only works when AE1ON is set to off)
+3. _E1 AMP DEPTH_:		sets the amount of amplitude modulation, when the envelope is at it's highest
+4. _E1 OSC DEPTH_:		sets the amount of pitch modulation, when the envelope is at it's highest
+5. _E1 FILT DEPTH_:	sets the amount of filter frequency modulation, when the envelope is at it's highest
 (same for Faders 2, 6, 7, & 8 but controlling Envelope 2)
 
-Transport:
-E1>AMP				map envelope 1 to amplitude (on by default, when off E1 AMP DEPTH has no effect)
-E1>OSC				map envelope 1 to pitch (on by default, when off E1 OSC DEPTH has no effect)
-E1>FILT				map envelope 1 to filter (on by default, when off E1 FILT DEPTH has no effect)
-AE1ON				places Envelope 1 into automatic mode (E1 LEVEL no longer has any effect)
+Transport Buttons:
+_E1>AMP_:			map envelope 1 to amplitude (on by default, when off E1 AMP DEPTH has no effect)
+_E1>OSC_:			map envelope 1 to pitch (on by default, when off E1 OSC DEPTH has no effect)
+_E1>FILT_:			map envelope 1 to filter (on by default, when off E1 FILT DEPTH has no effect)
+_AE1ON_:			places Envelope 1 into automatic mode (E1 LEVEL no longer has any effect)
 (these controls are also repeated for Envelope 2)
-MUTE				simply mutes the entire output of the synth
+_MUTE_:				simply mutes the entire output of the synth
 
 # Code Your Own Version
 
