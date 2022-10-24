@@ -20,21 +20,21 @@ The project was coded using the dedicated synthesis programming language [Faust]
 
 SawSynth uses classic additive synthesis model, consisting of three saw wave oscillators which are combined and sent through a low pass 'moog-style' filter. Two of oscillators can be detuned to create 'thicker' sounds. The oscillators exhibit noise artifacts at lower frequencies, which the synth a raw, dirty sound in the low range.
 
-SawSynth also features two independant envelopes, which can manually or automatically control combinations of amplitude (i.e. volume), oscillator frequency (i.e. pitch) and filter frequency. Here and below, we will just describe the controls for Envelope 1.
+SawSynth also features two independant envelopes, which can manually or automatically control combinations of amplitude (i.e. volume), oscillator frequency (i.e. pitch) and filter frequency. Here and below, I will just describe the controls for Envelope 1.
 
 To quickly hear the effect of Envelope 1, place it in automatic mode, by pressing the AE1ON button once (lights red). This will create a retriggering Attack-Release envelope, with times set by knobs 6 and 7, respectively. Now adjust faders 3, 4 and 5 as you like, to have the envelope modulate volume, pitch or filter frequency by setting their depths. When the AE1ON button is off, fader 1 (E1 LEVEL) manually controls the level of the envelope.
 
 The full range of controls are described as follows:
 
 Knobs 1-8:
-1. OSC FREQ			master pitch reference for all three saw waves
+1. _OSC FREQ_:		master pitch reference for all three saw waves
 					ranges from 138.59Hz (MIDI Note 49) to 1318.51Hz (MIDI Note 88)
-2. DETUNE 1			slightly detune the second of the three saw oscillators
-3. DETUNE 2			slightly detune the third of the three saw oscillators
-4. FILT FREQ		set cutoff frequency of the moog-style low-pass filter
-5. FILT RES			set resonance of the moog-style low-pass filter ('sings' at high values)
-6. AENV ATK			set the attack time of the automatic envelope
-7. AENV RLS			set the release time of the automatic envelope
+2. DETUNE 1:			slightly detune the second of the three saw oscillators
+3. DETUNE 2:			slightly detune the third of the three saw oscillators
+4. FILT FREQ:		set cutoff frequency of the moog-style low-pass filter
+5. FILT RES:			set resonance of the moog-style low-pass filter ('sings' at high values)
+6. AENV ATK:			set the attack time of the automatic envelope
+7. AENV RLS:			set the release time of the automatic envelope
 					NOTE: ENV2 operates at twice the speed of ENV1!
 8. MAIN VOL			does what it says on the tin (can distort when too loud!)
 
