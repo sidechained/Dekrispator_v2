@@ -339,9 +339,11 @@ Faust2STMSynth.siz: Faust2STMSynth.elf
 	$(ARM_PATH)arm-none-eabi-size --format=berkeley --totals "Faust2STMSynth.elf"
 
 # Other Targets
-clean: cleanMidiCode
+clean:
 	-rm -rf $(OBJS) Faust2STMSynth.bin Faust2STMSynth.lst Faust2STMSynth.siz $(S_UPPER_DEPS)$(C_DEPS) Faust2STMSynth.elf
 	
+cleanall: cleanMidiCode clean
+
 flash:
 	st-flash write Faust2STMSynth.bin 0x8000000
 

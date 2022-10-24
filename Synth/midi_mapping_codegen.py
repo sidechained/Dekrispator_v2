@@ -3,6 +3,8 @@
 # variable extraction from mydsp.c
 
 import re
+import numpy
+
 midi_ccs = []
 param_names = []
 fh_slider_names = []
@@ -28,6 +30,18 @@ for line in open('../Synth/mydsp.c'):
         max_vals.append(match_min_max[2])
 
 # order by MIDI CC
+
+def sort_by_indexes(lst, indexes, reverse=False):
+  return [lst[i] for i in indexes]
+
+midi_ccs = [int(midi_cc) for midi_cc in midi_ccs]
+s = numpy.argsort(midi_ccs)
+midi_ccs = [str(midi_cc) for midi_cc in midi_ccs]
+midi_ccs = sort_by_indexes(midi_ccs, s)
+param_names = sort_by_indexes(param_names, s)
+fh_slider_names = sort_by_indexes(fh_slider_names, s)
+min_vals = sort_by_indexes(min_vals, s)
+max_vals = sort_by_indexes(max_vals, s)
 
 # code generation
 
