@@ -10,9 +10,7 @@ The project was coded using the dedicated synthesis programming language [Faust]
 
 2. Connect a source source (typically headphones or a powered speaker) to the 3.5mm audio jack on the left hand side of the case.
 
-3. To power-on the synth, plug the loose USB cable (hanging from the right hand side of the case) into one of the empty USB ports (on the same side). The PWR indicator on the top left of the synthesiser should come on.
-
-NOTE: If it doesn't, the power bank likely needs charging. Plug the loose USB cable instead into any standard USB phone-charger (specs) and wait a while.
+3. To power-on the synth, plug the loose USB cable (hanging from the right hand side of the case) into one of the empty USB ports (on the same side). The PWR indicator on the top left of the synthesiser should come on. NOTE: If it doesn't power-on, the power bank likely needs charging. Plug the loose USB cable instead into any standard USB phone-charger (specs) and wait a while.
 
 4. Once powered-on, the synth does not initially make sound. To hear anything you need to first turn up the 'E1 LEVEL' and/or 'E2 LEVEL' faders. Once you hear something, begin adjusting the knobs at the top, paying partcular attention to the volume control on the far right (take care, volume can jump loudly!). Each control will need to be adjusted once to reach it's 'true' value.
 
