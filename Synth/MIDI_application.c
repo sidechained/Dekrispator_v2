@@ -198,7 +198,169 @@ void ProcessReceivedMidiDatas(void)
 
 			// FADERS 1-8
 			case 0:
-				set_env1(val);
+				nk2_Fader1(val);
+				break;
+			case 1:
+				nk2_Fader2(val);
+				break;
+			case 2:
+				nk2_Fader3(val);
+				break;
+			case 3:
+				nk2_Fader4(val);
+				break;
+			case 4:
+				nk2_Fader5(val);
+				break;
+			case 5:
+				nk2_Fader6(val);
+				break;
+			case 6:
+				nk2_Fader7(val);
+				break;
+			case 7:
+				nk2_Fader8(val);
+				break;
+
+			// KNOBS 1-8
+			case 16:
+				nk2_Knob1(val);			
+				break;
+			case 17:
+				nk2_Knob2(val);
+				break;
+			case 18:
+				nk2_Knob3(val);
+				break;
+			case 19:
+				nk2_Knob4(val);
+				break;
+			case 20:
+				nk2_Knob5(val);
+				break;
+			case 21:
+				nk2_Knob6(val);
+				break;
+			case 22:
+				nk2_Knob7(val);
+				break;
+			case 23:
+				nk2_Knob8(val);			
+				break;
+
+			// SOLO BUTTONS 1-8
+			case 32:
+				nk2_SoloButton1(val);
+				break;
+			case 33:
+				nk2_SoloButton2(val);
+				break;
+			case 34:
+				nk2_SoloButton3(val);
+				break;
+			case 35:
+				nk2_SoloButton4(val);
+				break;
+			case 36:
+				nk2_SoloButton5(val);
+				break;
+			case 37:
+				nk2_SoloButton6(val);
+				break;
+			case 38:
+				nk2_SoloButton7(val);
+				break;
+			case 39:
+				nk2_SoloButton8(val);
+				break;
+
+			// MUTE BUTTONS 1-8
+			case 48:
+				nk2_MuteButton1(val);
+				break;
+			case 49:
+				nk2_MuteButton2(val);
+				break;
+			case 50:
+				nk2_MuteButton3(val);
+				break;
+			case 51:
+				nk2_MuteButton4(val);
+				break;
+			case 52:
+				nk2_MuteButton5(val);
+				break;
+			case 53:
+				nk2_MuteButton6(val);
+				break;
+			case 54:
+				nk2_MuteButton7(val);
+				break;
+			case 55:
+				nk2_MuteButton8(val);
+				break;
+
+			// RECORD BUTTONS 1-8
+			case 64:
+				nk2_RecordButton1(val);
+				break;
+			case 65:
+				nk2_RecordButton2(val);
+				break;
+			case 66:
+				nk2_RecordButton3(val);
+				break;
+			case 67:
+				nk2_RecordButton4(val);
+				break;
+			case 68:
+				nk2_RecordButton5(val);
+				break;
+			case 69:
+				nk2_RecordButton6(val);
+				break;
+			case 70:
+				nk2_RecordButton7(val);
+				break;
+			case 71:
+				nk2_RecordButton8(val);
+				break;
+
+			// LOWER TRANSPORT SECTION
+			case 43:
+				nk2_TransportRewindButton(val);
+				break;
+			case 44:
+				nk2_TransportFastForwardButton(val);
+				break;
+			case 42:
+				nk2_TransportStopButton(val);
+				break;
+			case 41:
+				nk2_TransportPlayButton(val);
+				break;
+			case 45:
+				nk2_TransportRecordButton(val);
+				break;
+			
+			// UPPER TRANSPORT SECTION
+			case 46:
+				nk2_TransportCycleButton(val);
+				break;
+			case 58:
+				nk2_TransportTrackDecrementButton(val);
+				break;
+			case 59:
+				nk2_TransportTrackIncrementButton(val);
+				break;
+			case 60:
+				nk2_TransportSetMarkerButton(val);
+				break;
+			case 61:
+				nk2_TransportMarkerIncrementButton(val);
+				break;
+			case 62:
+				nk2_TransportMarkerDecrementButton(val);
 				break;
 			}
 		}
