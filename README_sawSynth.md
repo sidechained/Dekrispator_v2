@@ -4,7 +4,7 @@ This project is a first attempt at building a portable battery-powered digital s
 
 ![SawSynth Prototype](Resources/SawSynth.jpeg)
 
-The project was coded using the dedicated synthesis programming language [Faust](https://faust.grame.fr), with the aim being to enable synthesiser designs to be prototyped interactively in the browser, then uploaded to the board. The code for the whole project can be found [here](https://github.com/sidechained/Faust2STMSynth) and is a fork of the excellent [Dekrispator](https://github.com/MrBlueXav/Dekrispator_v2) synthesiser project, using their drivers as a template. The [STM32F4-Synth](https://github.com/pierstitus/STM32F4-Synth) project was also very helpful.
+The project was coded using the dedicated synthesis programming language [Faust](https://faust.grame.fr), with the aim being to enable synthesiser designs to be prototyped interactively in the browser, then uploaded to the board. The code for the whole project can be found at [https://github.com/sidechained/Faust2STMSynth](https://github.com/sidechained/Faust2STMSynth) and is a fork of the excellent [Dekrispator](https://github.com/MrBlueXav/Dekrispator_v2) synthesiser project, using their drivers as a template. The [STM32F4-Synth](https://github.com/pierstitus/STM32F4-Synth) project was also very helpful.
 
 # Getting Connected
 
