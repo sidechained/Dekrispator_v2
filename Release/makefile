@@ -318,7 +318,13 @@ ifneq ($(strip $(C_DEPS)),)
 -include $(C_DEPS)
 endif
 
-all: Faust2STMSynth.elf Faust2STMSynth.bin Faust2STMSynth.lst Faust2STMSynth.siz
+all: generateMidiCode Faust2STMSynth.elf Faust2STMSynth.bin Faust2STMSynth.lst Faust2STMSynth.siz
+
+generateMidiCode:
+	python ../Synth/midi_mapping_codegen.py
+
+cleanMidiCode:
+	rm ../Synth/MIDI_application_CCs.c ../Synth/soundGen_sliderSetters.c
 
 Faust2STMSynth.elf: $(OBJS)
 	$(ARM_PATH)arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -flto -Wunused -Wuninitialized -Wall -Wconversion -Wshadow -Wfloat-equal -T "../drivers/STM32F407VG_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"Faust2STMSynth.map" --specs=nosys.specs -o "Faust2STMSynth.elf" $(OBJS) -lm -lc -lg
@@ -333,7 +339,7 @@ Faust2STMSynth.siz: Faust2STMSynth.elf
 	$(ARM_PATH)arm-none-eabi-size --format=berkeley --totals "Faust2STMSynth.elf"
 
 # Other Targets
-clean:
+clean: cleanMidiCode
 	-rm -rf $(OBJS) Faust2STMSynth.bin Faust2STMSynth.lst Faust2STMSynth.siz $(S_UPPER_DEPS)$(C_DEPS) Faust2STMSynth.elf
 	
 flash:

@@ -16,14 +16,7 @@ void Synth_Init(void) {
     initmydsp(dsp, SAMPLERATE);
 }
 
-// Faders
-
-void set_env1(int val) {
-    float min = 0.0f;
-    float max = 1.0f;
-    float zeroToOne = ((float)val)/127;
-    dsp->fHslider0 = (zeroToOne * (max-min)) + min;
-}
+#include "soundGen_sliderSetters.c"
 
 void make_sound(uint16_t *buf, uint16_t len) // BUF_LEN_DIV4
 {

@@ -1,3 +1,5 @@
+# run from Release folder
+
 # variable extraction from mydsp.c
 
 import re
@@ -7,7 +9,7 @@ fh_slider_names = []
 min_vals = []
 max_vals = []
 
-for line in open('mydsp.c'):
+for line in open('../Synth/mydsp.c'):
     match = re.search('"midi", "ctrl (.*?) ', line)
     if match:
         midi_ccs.append(match.group(1))
@@ -29,14 +31,14 @@ for line in open('mydsp.c'):
 
 # code generation
 
-f = open("MIDI_application_CCs.c", "a")
+f = open("../Synth/MIDI_application_CCs.c", "a")
 for i,midi_cc in enumerate(midi_ccs):
     f.write('\t\t\tcase ' + midi_ccs[i] + ': //' + param_names[i] + '\n\t\t\t\tset_' + fh_slider_names[i] + "(val, " + min_vals[i] + ", " + max_vals[i] + ");\n\t\t\t\tbreak;\n")
 f.close()
 
-f = open("mydsp_sliderSetters.c", "a")
-f.write('void scale(int val, float min, float max)\n{\n\tfloat zeroToOne = ((float)val)/127;\t\n\treturn ((zeroToOne * (max-min)) + min);\n}\n\n')
+f = open("../Synth/soundGen_sliderSetters.c", "a")
+f.write('float scale_min_max(int val, float min, float max)\n{\n\tfloat zeroToOne = ((float)val)/127;\t\n\treturn ((zeroToOne * (max-min)) + min);\n}\n\n')
 
 for i,midi_cc in enumerate(midi_ccs):
-    f.write('void set_' + fh_slider_names[i] + '(int val, float min, float max)\n{\n\tdsp->' + fh_slider_names[i] + ' = scale(val, min, max);\n}\n\n')
+    f.write('void set_' + fh_slider_names[i] + '(int val, float min, float max)\n{\n\tdsp->' + fh_slider_names[i] + ' = scale_min_max(val, min, max);\n}\n\n')
 f.close()
