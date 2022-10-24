@@ -44,7 +44,7 @@ Faders:
 - _E1 OSC DEPTH_:		sets the amount of pitch modulation, when the envelope is at it's highest
 - _E1 FILT DEPTH_:	sets the amount of filter frequency modulation, when the envelope is at it's highest
 
-(same goes for Faders 2, 6, 7, & 8 but controlling Envelope 2)
+	(same goes for Faders 2, 6, 7, & 8 but controlling Envelope 2)
 
 Transport Buttons:
 - _E1>AMP_:			map envelope 1 to amplitude (on by default, when off E1 AMP DEPTH has no effect)
@@ -52,7 +52,7 @@ Transport Buttons:
 - _E1>FILT_:			map envelope 1 to filter (on by default, when off E1 FILT DEPTH has no effect)
 - _AE1ON_:			places Envelope 1 into automatic mode (E1 LEVEL no longer has any effect)
 
-(these controls are also repeated for Envelope 2)
+	(these controls are also repeated for Envelope 2)
 
 - _MUTE_:				simply mutes the entire output of the synth
 
