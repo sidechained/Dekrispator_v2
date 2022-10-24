@@ -58,29 +58,29 @@ Transport Buttons:
 
 # Code Your Own Version
 
-As mentioned previously, the project was designed so that you can easily code your own synth and upload it to the board. Here I explain how to do this. This requires that you have the [arm toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)* and [Faust](https://faust.grame.fr/downloads/) installed locally on your system.
-
-* Note: I installed 'arm-gnu-toolchain-12.2.MPACBTI-Bet1-darwin-x86_64-arm-none-eabi.pkg'
+As mentioned previously, the project was designed so that you can easily code your own synth and upload it to the board. Here I explain how to do this. This requires that you have the [arm toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads) and [Faust](https://faust.grame.fr/downloads/) installed locally on your system. I installed 'arm-gnu-toolchain-12.2.MPACBTI-Bet1-darwin-x86_64-arm-none-eabi.pkg'.
 
 NOTE: Currently, many of the more demanding time-based audio effects available in Faust (reverbs, delays etc) are not working on the STM discovery board, so stick to the oscillators, envelopes etc for now. I hope to be able to fix this soon.
 
 1. Disconnect the cable on the left hand side and instead connect the NanoKontrol2 (top output) to your PC (requires additional mini-USB to standard-USB cable).
 
-2. Open [Faust](https://faust.grame.fr) in your browser (Chrome recommended!) and begin coding your new synth. When creating the user interface for your synth, ALL controls must be hsliders. Yes that even means buttons (this can be achieved by setting the step parameter of the hslider to 1). See the [SawSynth Faust code](https://github.com/sidechained/Faust2STMSynth/blob/dekrispatorV3/Synth/mydsp-faustCode.dsp) for reference or to use as a template.
+2. Open the [Faust IDE](https://faustide.grame.fr) in your browser (Chrome recommended!) and begin coding your new synth. When creating the user interface for your synth, ALL controls must be hsliders. Yes that even means buttons (this can be achieved by setting the step parameter of the hslider to 1). See the [SawSynth Faust code](https://github.com/sidechained/Faust2STMSynth/blob/dekrispatorV3/Synth/mydsp-faustCode.dsp) for reference or to use as a template.
 
-3. Assign your interface controls to the appropriate MIDI CC's for the NanoKontrol 2 by including \[midi:ctrl CC CHANNEL\] in the name. It also helps to follow the naming convention Control:Parameter i.e. Knob4:Filter Frequency. `si.smoo` is recommended in order to avoid 'zipper noise' i.e. nasty sonic jumps when adjusting controls. For example:
+3. Assign your interface controls to the appropriate MIDI CC's for the NanoKontrol 2 by including `\[midi:ctrl CC CHANNEL\]` in the name. It also helps to follow the naming convention Control:Parameter i.e. Knob4:Filter Frequency. `si.smoo` is recommended in order to avoid 'zipper noise' i.e. nasty sonic jumps when adjusting controls. For example:
 
 `filtfr = hslider("[03]Knob4:Filter Frequency[unit:Hz][midi:ctrl 19 1]", 3000, 0, 15000, 10) : si.smoo;`
 
 NOTE: We are using the standard NanoKontrol 2 midi template, as found in the Korg Kontrol Editor.
 
-4. Export the code using the truck icon, naming it 'mydsp', choosing Platform 'source' and Architecture 'c', then click Compile, followed by Download.
+4. Export the code from the IDE using the truck icon, naming it 'mydsp', choosing Platform 'source' and Architecture 'c', then click Compile, followed by Download.
 
 5. Clone the [github repo](https://github.com/sidechained/Faust2STMSynth) locally, then copy the extracted files from Step 4
 (mydsp.dsp and mydsp.c) into the /Synth directory in the repo.
 
-6. In terminal, navigate to the root folder of the repo and then into the "Release" folder. Open the 'makefile' in the text editor of your choice, editing the first two lines (ARM_PATH and FAUST_PATH) to reference the correct locations of these on your system.
+6. In terminal, navigate to the root folder of the repo and then into the 'Release' folder. Open the [makefile](https://github.com/sidechained/Faust2STMSynth/blob/dekrispatorV3/Release/makefile) in the text editor of your choice, editing the first two lines (ARM_PATH and FAUST_PATH) to reference the correct locations of these on your system.
 
-7. Still in the  "Release" folder, run 'make' to compile the project, then 'make flash' to flash it to the STM32F407VG discovery board (connected to your PC via the larger of the two USB connectors on the board, mini-B). After flashing, harsh noise can be heard from the audio output. Unplug and replug power to allow the new synth to be heard/controlled.
+7. Still in the  "Release" folder, run `make` to compile the project, then `make flash` to flash it to the STM32F407VG discovery board (connected to your PC via the larger of the two USB connectors on the board, mini-B). After flashing, harsh noise can be heard from the audio output. Unplug and replug power to allow the new synth to be heard/controlled.
 
 8. Disconnect the NanoKontrol from your PC and reconnect it to the discovery board's USB OTG port using the short cable mentioned previously.
+
+With luck, your synth now runs as well as a physical device as it did when it was tethered to your PC!
