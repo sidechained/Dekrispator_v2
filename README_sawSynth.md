@@ -28,17 +28,21 @@ The full range of controls are described as follows:
 
 Knobs 1-8:
 - _OSC FREQ_:		master pitch reference for all three saw waves
-					ranges from 138.59Hz (MIDI Note 49) to 1318.51Hz (MIDI Note 88)
+	
+	ranges from 138.59Hz (MIDI Note 49) to 1318.51Hz (MIDI Note 88)
+
 - _DETUNE 1_:			slightly detune the second of the three saw oscillators
 - _DETUNE 2_:			slightly detune the third of the three saw oscillators
 - _FILT FREQ_:		set cutoff frequency of the moog-style low-pass filter
 - _FILT RES_:			set resonance of the moog-style low-pass filter ('sings' at high values)
 - _AENV ATK_:			set the attack time of the automatic envelope
 - _AENV RLS_:			set the release time of the automatic envelope
-					NOTE: ENV2 operates at twice the speed of ENV1!
+
+	NOTE: ENV2 operates at twice the speed of ENV1!
+
 - _MAIN VOL_:			does what it says on the tin (can distort when too loud!)
 
-Faders:
+Faders 1-8:
 - _E1 LEVEL_:		sets the current level of the envelope (only works when AE1ON is set to off)
 - _E1 AMP DEPTH_:		sets the amount of amplitude modulation, when the envelope is at it's highest
 - _E1 OSC DEPTH_:		sets the amount of pitch modulation, when the envelope is at it's highest
